@@ -19,8 +19,6 @@ La Celina.
 
 Organizar el proyecto con una arquitectura **MVC (Modelo - Vista - Controlador)** sencilla y preparada para trabajar únicamente con las áreas que actualmente existen en la base de datos `ganaderia`.
 
-No se crean módulos futuros que todavía no estén representados en la base de datos vigente.
-
 ## Tecnologías
 
 - PHP 8.2.12.
@@ -28,10 +26,9 @@ No se crean módulos futuros que todavía no estén representados en la base de 
 - XAMPP.
 - HTML5.
 - CSS3.
-- JavaScript cuando sea necesario.
+- JavaScript 
 - PDO para la conexión con la base de datos.
 
-No se utiliza framework, Composer ni archivo `.env`.
 
 ## Estructura del proyecto
 
