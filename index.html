@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Catálogo de prototipos visuales de SIGGAF, sistema de gestión ganadera.">
+    <title>SIGGAF · Catálogo de interfaces</title>
+    <link rel="stylesheet" href="assets/catalog.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#inicio" aria-label="Ir al inicio">
+        <span class="brand-mark" aria-hidden="true">S</span>
+        <span>
+          <strong>SIGGAF</strong>
+          <small>Biblioteca visual</small>
+        </span>
+      </a>
+      <a class="header-link" href="agroindustrial_precision/DESIGN.md">Sistema de diseño</a>
+    </header>
+
+    <main id="inicio">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <p class="eyebrow">Gestión ganadera, de punta a punta</p>
+          <h1 id="hero-title">Todas las interfaces de SIGGAF, en un solo lugar.</h1>
+          <p class="hero-description">Explorá los prototipos para escritorio y móvil, desde el ingreso al sistema hasta el trabajo diario en manga.</p>
+          <div class="hero-actions">
+            <a class="primary-button" href="#catalogo">Explorar pantallas</a>
+            <a class="secondary-button" href="usuarios_y_permisos_alta_y_edici_n_siggaf/code.html">Abrir Usuarios y permisos</a>
+          </div>
+        </div>
+        <div class="hero-visual" aria-hidden="true">
+          <img src="cinematic_scenic_landscape_of_argentine_pampas_countryside_peaceful_cattle/screen.png" alt="">
+          <div class="hero-badge">
+            <span>Prototipos</span>
+            <strong id="screen-count">20</strong>
+          </div>
+        </div>
+      </section>
+
+      <section class="catalog-section" id="catalogo" aria-labelledby="catalog-title">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Catálogo navegable</p>
+            <h2 id="catalog-title">Pantallas y recursos</h2>
+          </div>
+          <label class="search-box">
+            <span class="sr-only">Buscar una pantalla</span>
+            <svg aria-hidden="true" viewBox="0 0 24 24"><path d="m21 21-4.35-4.35m2.35-5.65a8 8 0 1 1-16 0 8 8 0 0 1 16 0Z"/></svg>
+            <input id="search" type="search" placeholder="Buscar una pantalla…" autocomplete="off">
+          </label>
+        </div>
+
+        <div class="filters" aria-label="Filtrar por categoría">
+          <button class="filter is-active" type="button" data-filter="all">Todo</button>
+          <button class="filter" type="button" data-filter="desktop">Escritorio</button>
+          <button class="filter" type="button" data-filter="mobile">Móvil</button>
+          <button class="filter" type="button" data-filter="access">Acceso y ayuda</button>
+          <button class="filter" type="button" data-filter="brand">Marca</button>
+        </div>
+
+        <div class="catalog-grid" id="catalog-grid" aria-live="polite"></div>
+        <p class="empty-state" id="empty-state" hidden>No encontramos pantallas con ese criterio.</p>
+      </section>
+
+      <section class="notes" aria-labelledby="notes-title">
+        <div>
+          <p class="eyebrow">Documentación</p>
+          <h2 id="notes-title">Del prototipo a la implementación</h2>
+          <p>La guía de exportación propone una estructura PHP MVC para convertir estas vistas en módulos mantenibles.</p>
+        </div>
+        <a class="primary-button" href="estructura_de_exportaci_n_php_mvc_siggaf.md">Leer guía técnica</a>
+      </section>
+    </main>
+
+    <footer>
+      <p>Repositorio visual de SIGGAF · Prototipos HTML</p>
+      <a href="#inicio">Volver arriba</a>
+    </footer>
+
+    <script src="assets/catalog.js"></script>
+  </body>
+</html>

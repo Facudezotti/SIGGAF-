@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+
+<html lang="es"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = {
+  darkMode: "class",
+  theme: {
+    extend: {
+      "colors": {
+        "tertiary-container": "#483003",
+        "inverse-primary": "#aeceb9",
+        "surface-container-low": "#e8f7eb",
+        "tertiary-fixed": "#ffdeae",
+        "outline-variant": "#c2c8c2",
+        "primary": "#072417",
+        "secondary-container": "#a2f79c",
+        "on-error-container": "#93000a",
+        "surface": "#eefdf1",
+        "on-primary": "#ffffff",
+        "on-surface": "#121e17",
+        "surface-container": "#e3f2e5",
+        "secondary": "#196d24",
+        "background": "#eefdf1",
+        "primary-fixed-dim": "#aeceb9",
+        "inverse-on-surface": "#e6f5e8",
+        "on-primary-container": "#85a490",
+        "surface-container-high": "#ddece0",
+        "on-secondary-fixed-variant": "#005313",
+        "inverse-surface": "#26332b",
+        "primary-container": "#1e3a2b",
+        "outline": "#727973",
+        "on-error": "#ffffff",
+        "surface-dim": "#cfded2",
+        "tertiary": "#2d1c00",
+        "on-tertiary-fixed": "#281900",
+        "on-primary-fixed": "#042013",
+        "on-primary-fixed-variant": "#304d3d",
+        "secondary-fixed": "#a2f79c",
+        "surface-bright": "#eefdf1",
+        "on-secondary-container": "#21732a",
+        "surface-container-highest": "#d7e6da",
+        "error-container": "#ffdad6",
+        "secondary-fixed-dim": "#87da83",
+        "primary-fixed": "#caead4",
+        "error": "#ba1a1a",
+        "surface-container-lowest": "#ffffff",
+        "on-tertiary-container": "#bb9861",
+        "tertiary-fixed-dim": "#e7c187",
+        "on-surface-variant": "#424843",
+        "surface-variant": "#d7e6da",
+        "on-background": "#121e17",
+        "on-secondary-fixed": "#002204",
+        "on-secondary": "#ffffff",
+        "surface-tint": "#486554",
+        "on-tertiary": "#ffffff",
+        "on-tertiary-fixed-variant": "#5c4214"
+      },
+      "borderRadius": {
+        "DEFAULT": "0.125rem",
+        "lg": "0.25rem",
+        "xl": "0.5rem",
+        "full": "0.75rem"
+      },
+      "spacing": {
+        "gutter": "1.25rem",
+        "margin-mobile": "1rem",
+        "space-md": "1rem",
+        "space-sm": "0.5rem",
+        "space-xs": "0.25rem",
+        "space-xl": "2.5rem",
+        "gutter-mobile": "0.75rem",
+        "margin": "2rem",
+        "space-lg": "1.5rem"
+      },
+      "fontFamily": {
+        "body-sm": ["Plus Jakarta Sans"],
+        "body-md": ["Plus Jakarta Sans"],
+        "label-md": ["Plus Jakarta Sans"],
+        "headline-sm": ["Plus Jakarta Sans"],
+        "label-lg": ["Plus Jakarta Sans"],
+        "label-sm": ["Plus Jakarta Sans"],
+        "body-lg": ["Plus Jakarta Sans"],
+        "headline-md": ["Plus Jakarta Sans"],
+        "title-md": ["Plus Jakarta Sans"],
+        "headline-lg-mobile": ["Plus Jakarta Sans"],
+        "headline-lg": ["Plus Jakarta Sans"]
+      },
+      "fontSize": {
+        "body-sm": ["12px", {"lineHeight": "16px", "fontWeight": "400"}],
+        "body-md": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+        "label-md": ["12px", {"lineHeight": "16px", "fontWeight": "600"}],
+        "headline-sm": ["20px", {"lineHeight": "28px", "fontWeight": "600"}],
+        "label-lg": ["14px", {"lineHeight": "20px", "fontWeight": "600"}],
+        "label-sm": ["11px", {"lineHeight": "14px", "fontWeight": "700"}],
+        "body-lg": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+        "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+        "title-md": ["16px", {"lineHeight": "24px", "fontWeight": "600"}],
+        "headline-lg-mobile": ["26px", {"lineHeight": "34px", "fontWeight": "700"}],
+        "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "700"}]
+      }
+    }
+  }
+}</script></head><body class="bg-surface font-body-md text-body-md text-on-surface antialiased"><header class="fixed top-0 w-full z-50 bg-surface-container-lowest/95 backdrop-blur-md shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 w-full px-margin flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-lg"><div class="flex items-center gap-space-sm"><img alt="Brand logo. - Primary color: #1e3a2b
+- Font: plusJakartaSans
+- Mode: light
+- Roundness: rounded-sm
+" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1U1uDRhUzi4Eh6NAUZVWU4mqL2j6cP71Q0xVF2m8MRtxAWub2id0Z9na2CoOC4uOyEze1Q5hTP-FLdC5ECwtmjGYfNaFWZIcGJyjcEoHCz83dDCJgHd5TliqU4f5ood1fcV-3BBJsKZcSLKvtn7h1BYseaZ14FnnRbrnxJzU20AHngr13bsf-9NR0Qb3QuURTJtkL6LiUZKGnHtQZQjPonDdN2O5t4ryPqfwcuI0Q6YO2Rm21QZbhWCLr4"/><div class="flex flex-col"><span class="font-title-md text-title-md text-primary leading-none tracking-tight">SIGGAF</span><span class="font-label-sm text-label-sm text-on-surface-variant leading-none mt-space-xs uppercase tracking-wider">Gestión Ganadera</span></div></div><nav class="hidden xl:flex items-center gap-space-xs" data-active-classes="bg-primary-container text-on-primary font-label-md rounded-lg"><a class="px-space-sm py-space-xs rounded-lg font-label-md text-label-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="inicio" href="#">Inicio</a><a aria-current="page" class="px-space-sm py-space-xs transition-colors bg-primary-container text-on-primary font-label-md rounded-lg" data-path="animales" href="#">Animales</a><a class="px-space-sm py-space-xs rounded-lg font-label-md text-label-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="potreros" href="#">Potreros</a><a class="px-space-sm py-space-xs rounded-lg font-label-md text-label-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="lotes" href="#">Lotes</a><a class="px-space-sm py-space-xs rounded-lg font-label-md text-label-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="movimientos" href="#">Movimientos</a><a class="px-space-sm py-space-xs rounded-lg font-label-md text-label-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="usuarios" href="#">Usuarios</a><a class="px-space-sm py-space-xs rounded-lg font-label-md text-label-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="establecimiento" href="#">Establecimiento</a><a class="px-space-sm py-space-xs rounded-lg font-label-md text-label-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="configuracion" href="#">Configuración</a></nav></div><div class="flex items-center gap-space-md"><div class="hidden md:flex items-center gap-space-xs px-space-sm py-space-xs rounded-lg bg-surface-container-low text-secondary"><span class="material-symbols-outlined text-[18px]">cloud_done</span><span class="font-label-sm text-label-sm tracking-wide">Modo Local / Sincronizado</span></div><div class="flex items-center gap-space-sm pl-space-sm bg-surface-container-high/40 rounded-lg p-space-xs"><div class="flex flex-col text-right hidden sm:flex"><span class="font-label-md text-label-md text-primary leading-tight">Don Juan Pérez</span><span class="font-label-sm text-label-sm text-on-surface-variant leading-tight">Dueño / Encargado</span></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></div></header><main class="w-full pt-16 bg-surface"><div class="flex flex-col w-full">
+<!-- Subheader / Breadcrumb Module Ribbon -->
+<div class="w-full bg-surface-container-lowest shadow-sm px-margin py-space-sm mb-space-md">
+<div class="max-w-[1440px] mx-auto flex flex-col md:flex-row md:items-center justify-between gap-space-sm">
+<div class="flex items-center flex-wrap gap-space-xs">
+<span class="font-label-md text-label-md text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[18px]">calendar_view_week</span>
+          Lotes y Movimientos
+        </span>
+<span class="text-on-surface-variant font-label-md">›</span>
+<span class="font-headline-sm text-headline-sm text-primary flex items-center gap-space-xs">
+          Ficha de Lote: <span class="text-secondary font-bold">Lote Invernada 2024</span>
+<span class="font-body-md text-body-md text-on-surface-variant hidden lg:inline">(P-04 El Bajadón)</span>
+</span>
+<div class="ml-space-xs inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-secondary-fixed text-on-secondary-fixed-variant font-label-sm text-label-sm">
+<span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span>
+          LOTE ACTIVO / ABIERTO
+        </div>
+</div>
+<div class="flex items-center gap-space-sm self-end md:self-auto">
+<button class="inline-flex items-center gap-2 px-space-md py-2 rounded-lg bg-surface-container-low text-secondary font-label-lg text-label-lg hover:bg-surface-container transition-all">
+<span class="material-symbols-outlined text-[20px]">arrow_back</span>
+<span>Volver al Listado de Lotes</span>
+</button>
+<button class="inline-flex items-center gap-2 px-3 py-2 rounded-lg bg-primary text-on-primary font-label-lg text-label-lg hover:bg-primary-container transition-all">
+<span class="material-symbols-outlined text-[18px]">print</span>
+<span class="hidden sm:inline">Imprimir Ficha</span>
+</button>
+</div>
+</div>
+</div>
+<div class="max-w-[1440px] w-full mx-auto px-margin space-y-space-md pb-space-xl">
+<!-- Row 2: KPIs Summary Bar with Visual Flavor -->
+<div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-space-sm">
+<!-- KPI 1: Animales -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex items-center justify-between relative overflow-hidden group">
+<div class="space-y-1 relative z-10">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-secondary">pets</span>
+            Total Animales en Lote
+          </span>
+<div class="flex items-baseline gap-2">
+<span class="font-headline-lg text-headline-lg text-primary">142</span>
+<span class="font-title-md text-title-md text-secondary font-bold">Cabezas</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Novillos de 1ra y 2da • Hereford/Angus</p>
+</div>
+<div class="w-12 h-12 rounded-xl bg-surface-container-low text-secondary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[28px]">scatter_plot</span>
+</div>
+<div class="absolute -right-4 -bottom-4 w-20 h-20 bg-secondary/5 rounded-full pointer-events-none"></div>
+</div>
+<!-- KPI 2: Peso Promedio -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex items-center justify-between relative overflow-hidden">
+<div class="space-y-1 relative z-10">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-secondary">scale</span>
+            Peso Promedio Actual
+          </span>
+<div class="flex items-baseline gap-2">
+<span class="font-headline-lg text-headline-lg text-primary">418</span>
+<span class="font-title-md text-title-md text-primary font-bold">kg</span>
+</div>
+<p class="font-body-sm text-body-sm text-secondary font-medium">Última manga hace 5 días (Báscula 1)</p>
+</div>
+<div class="w-12 h-12 rounded-xl bg-surface-container-low text-secondary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[28px]">monitoring</span>
+</div>
+<div class="absolute -right-4 -bottom-4 w-20 h-20 bg-secondary/5 rounded-full pointer-events-none"></div>
+</div>
+<!-- KPI 3: Potrero Actual -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex items-center justify-between relative overflow-hidden">
+<div class="space-y-1 relative z-10">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-secondary">fence</span>
+            Potrero Asignado
+          </span>
+<div class="flex items-baseline gap-1">
+<span class="font-headline-md text-headline-md text-primary truncate max-w-[200px]">P-04 El Bajadón</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">120 Ha • Receptividad: 1.18 EV/Ha</p>
+</div>
+<div class="w-12 h-12 rounded-xl bg-surface-container-low text-secondary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[28px]">grass</span>
+</div>
+<div class="absolute -right-4 -bottom-4 w-20 h-20 bg-secondary/5 rounded-full pointer-events-none"></div>
+</div>
+<!-- KPI 4: Ganancia Acumulada -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex items-center justify-between relative overflow-hidden">
+<div class="space-y-1 relative z-10">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-secondary">trending_up</span>
+            Ganancia Acumulada
+          </span>
+<div class="flex items-baseline gap-2">
+<span class="font-headline-lg text-headline-lg text-secondary">+740</span>
+<span class="font-title-md text-title-md text-on-surface-variant">g/día</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Ritmo óptimo en pastura consociada</p>
+</div>
+<!-- Sparkline SVG -->
+<div class="w-16 h-12 flex items-center justify-center shrink-0">
+<svg class="w-full h-full text-secondary" fill="none" preserveaspectratio="none" viewbox="0 0 64 36">
+<path d="M2 30 L12 26 L22 28 L32 18 L42 20 L52 10 L62 4" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"></path>
+<path d="M2 30 L12 26 L22 28 L32 18 L42 20 L52 10 L62 4 L62 36 L2 36 Z" fill="currentColor" fill-opacity="0.12"></path>
+</svg>
+</div>
+<div class="absolute -right-4 -bottom-4 w-20 h-20 bg-secondary/5 rounded-full pointer-events-none"></div>
+</div>
+</div>
+<!-- Visual Ambient Banner: Contextual Agro Landscape -->
+<div class="relative w-full h-36 rounded-xl overflow-hidden shadow-sm flex items-end">
+<div class="absolute inset-0 bg-cover bg-center" data-alt="Scenic aerial wide-angle photograph of rolling lush Argentine pampa pastures with grazing Hereford and Angus cattle along wooden fence lines, bathed in warm natural morning sunlight with distant farmhouse and silos, photorealistic tranquil rural farm atmosphere, 8k crisp details, verdant green grasses." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBpOwLOHLcIdUubOXcSHmfptQ6qPE3au1-4oPIj4J3sbUE3j4OsKdBxeUzRZXJ2q_KhuVb5H4oZ-D2eXkJsFg4CFeVNnhB98HjF1mIDnzL6IHHHjA_5YMSxnNve-9U7_momkCaE8h_GIk7IsbmQFHwJ8zKlkLdEnuuyB_gBNYenP2050L-ZyL0UFgg4bFPUYaMs517NIhdCCey1-cmGweM4bB6iRiF4DYEdpkUVE7cMXYYjc8Qj37rZ')">
+</div>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/40 to-transparent"></div>
+<div class="relative z-10 w-full p-space-md flex flex-col sm:flex-row sm:items-end justify-between gap-space-sm text-on-primary">
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary-fixed">Establecimiento La Querencia • Sección Ganadera Sur</span>
+<h2 class="font-headline-sm text-headline-sm text-on-primary">Manejo Nutricional y Pastoreo Racional Rotativo (PRV)</h2>
+</div>
+<div class="flex items-center gap-space-sm text-on-primary/90 font-label-md text-label-md bg-primary-container/80 backdrop-blur-md px-3 py-1.5 rounded-lg">
+<span class="material-symbols-outlined text-[18px] text-secondary-fixed">check_circle</span>
+<span>Carga animal ajustada a 120 Ha de alfalfa</span>
+</div>
+</div>
+</div>
+<!-- 2 Columns Grid -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-md items-start">
+<!-- COLUMNA IZQUIERDA (5 cols): Datos y Configuración del Lote + Nuevo Movimiento -->
+<div class="lg:col-span-5 space-y-space-md">
+<!-- Tarjeta 1: Datos Principales del Lote -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm space-y-space-md">
+<div class="flex items-center justify-between pb-space-sm bg-surface-container-low/40 -mx-space-md -mt-space-md px-space-md pt-space-md rounded-t-xl">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[22px]">badge</span>
+<h3 class="font-title-md text-title-md text-primary">Datos Principales del Lote</h3>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant bg-surface-container px-2 py-0.5 rounded">ID: LT-2024-04</span>
+</div>
+<form class="space-y-space-sm" onsubmit="event.preventDefault();">
+<!-- Nombre del Lote -->
+<div class="space-y-1">
+<label class="block font-label-md text-label-md text-primary" for="nombre-lote">Nombre del Lote</label>
+<div class="relative">
+<input class="w-full h-11 px-3 rounded-lg bg-surface-container-lowest text-on-surface font-body-md text-body-md focus:outline-none focus:bg-surface-container-low transition-all" id="nombre-lote" type="text" value="Lote Invernada 2024"/>
+<span class="material-symbols-outlined absolute right-3 top-2.5 text-on-surface-variant text-[20px]">edit</span>
+</div>
+</div>
+<!-- Fechas Grid -->
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-sm">
+<div class="space-y-1">
+<label class="block font-label-md text-label-md text-primary" for="fecha-creacion">Fecha de Creación</label>
+<div class="relative">
+<input class="w-full h-11 px-3 rounded-lg bg-surface-container-lowest text-on-surface font-body-md text-body-md focus:outline-none focus:bg-surface-container-low transition-all" id="fecha-creacion" type="date" value="2024-01-15"/>
+</div>
+</div>
+<div class="space-y-1">
+<label class="block font-label-md text-label-md text-primary" for="fecha-cierre">Estimada de Despacho</label>
+<div class="relative">
+<input class="w-full h-11 px-3 rounded-lg bg-surface-container-lowest text-on-surface font-body-md text-body-md focus:outline-none focus:bg-surface-container-low transition-all" id="fecha-cierre" type="date" value="2024-11-30"/>
+</div>
+</div>
+</div>
+<!-- Estado del Lote (Selector táctil grande) -->
+<div class="space-y-1 pt-1">
+<label class="block font-label-md text-label-md text-primary">Estado Operativo del Lote</label>
+<div class="grid grid-cols-2 gap-2 p-1 bg-surface-container rounded-lg">
+<button class="flex items-center justify-center gap-2 py-2.5 px-3 rounded-lg bg-primary-container text-on-primary font-label-md text-label-md shadow-sm transition-all" type="button">
+<span class="material-symbols-outlined text-[18px] text-secondary-fixed">check_circle</span>
+<span>Abierto / Activo</span>
+</button>
+<button class="flex items-center justify-center gap-2 py-2.5 px-3 rounded-lg text-on-surface-variant hover:bg-surface-container-high font-label-md text-label-md transition-all" type="button">
+<span class="material-symbols-outlined text-[18px]">lock</span>
+<span>Cerrado / Liquidado</span>
+</button>
+</div>
+</div>
+<!-- Descripción y Objetivos -->
+<div class="space-y-1">
+<label class="block font-label-md text-label-md text-primary" for="desc-lote">Descripción y Objetivos de Producción</label>
+<textarea class="w-full p-3 rounded-lg bg-surface-container-lowest text-on-surface font-body-md text-body-md focus:outline-none focus:bg-surface-container-low transition-all resize-none" id="desc-lote" rows="3">Lote destinado a terminación a pasto en alfalfa con suplementación estratégica. Destino final faena pesada exportación.</textarea>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Notas internas visibles para encargados y peones de manga.</p>
+</div>
+<!-- Botones de Acción -->
+<div class="flex items-center justify-end gap-space-sm pt-space-xs">
+<button class="px-space-md py-2.5 rounded-lg text-on-surface-variant font-label-md text-label-md hover:bg-surface-container transition-colors" type="button">
+                Cancelar / Descartar
+              </button>
+<button class="inline-flex items-center gap-2 px-space-lg py-2.5 rounded-lg bg-primary text-on-primary font-label-md text-label-md hover:bg-primary-container shadow-sm transition-all active:scale-[0.98]" type="submit">
+<span class="material-symbols-outlined text-[18px]">save</span>
+<span>Guardar Cambios del Lote</span>
+</button>
+</div>
+</form>
+</div>
+<!-- Tarjeta 2: Registro de Nuevo Movimiento -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm space-y-space-md">
+<div class="flex items-center justify-between pb-space-sm bg-surface-container-low/40 -mx-space-md -mt-space-md px-space-md pt-space-md rounded-t-xl">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-[22px]">swap_horiz</span>
+<h3 class="font-title-md text-title-md text-primary">Registrar Nuevo Movimiento de Hacienda</h3>
+</div>
+<span class="font-label-sm text-label-sm text-secondary bg-secondary-container/40 px-2 py-0.5 rounded font-bold">ACCESO RÁPIDO</span>
+</div>
+<form class="space-y-space-sm" onsubmit="event.preventDefault();">
+<!-- Tipo de Movimiento (Selector táctil 4 opciones) -->
+<div class="space-y-1.5">
+<label class="block font-label-md text-label-md text-primary">Tipo de Movimiento</label>
+<div class="grid grid-cols-2 gap-2">
+<button class="flex flex-col items-start p-2.5 rounded-lg bg-primary-container text-on-primary text-left transition-all" type="button">
+<div class="flex items-center gap-1.5 w-full">
+<span class="material-symbols-outlined text-[18px] text-secondary-fixed">sync_alt</span>
+<span class="font-label-md text-label-md">Rotación Potrero</span>
+</div>
+<span class="font-body-sm text-body-sm text-primary-fixed-dim text-[11px] leading-tight mt-0.5">Pase a otra pastura</span>
+</button>
+<button class="flex flex-col items-start p-2.5 rounded-lg bg-surface-container-high text-on-surface hover:bg-surface-container-highest text-left transition-all" type="button">
+<div class="flex items-center gap-1.5 w-full">
+<span class="material-symbols-outlined text-[18px] text-primary">scale</span>
+<span class="font-label-md text-label-md">Pesaje en Manga</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant text-[11px] leading-tight mt-0.5">Control de kg periódico</span>
+</button>
+<button class="flex flex-col items-start p-2.5 rounded-lg bg-surface-container-high text-on-surface hover:bg-surface-container-highest text-left transition-all" type="button">
+<div class="flex items-center gap-1.5 w-full">
+<span class="material-symbols-outlined text-[18px] text-primary">input</span>
+<span class="font-label-md text-label-md">Ingreso / Compra</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant text-[11px] leading-tight mt-0.5">Suma animales al lote</span>
+</button>
+<button class="flex flex-col items-start p-2.5 rounded-lg bg-surface-container-high text-on-surface hover:bg-surface-container-highest text-left transition-all" type="button">
+<div class="flex items-center gap-1.5 w-full">
+<span class="material-symbols-outlined text-[18px] text-primary">local_shipping</span>
+<span class="font-label-md text-label-md">Salida / Despacho</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant text-[11px] leading-tight mt-0.5">Venta / Traslado fuera</span>
+</button>
+</div>
+</div>
+<!-- Destino Selector -->
+<div class="space-y-1">
+<label class="block font-label-md text-label-md text-primary" for="potrero-destino">Potrero Destino</label>
+<div class="relative">
+<select class="w-full h-11 px-3 pr-8 rounded-lg bg-surface-container-lowest text-on-surface font-body-md text-body-md focus:outline-none focus:bg-surface-container-low appearance-none" id="potrero-destino">
+<option selected="" value="p2">Potrero 2 - El Molino (145 Ha - Trébol Blanco • Descansado 22 días)</option>
+<option value="p1">Potrero 1 - La Aguada (80 Ha - Pasto Llorón)</option>
+<option value="p5">Potrero 5 - Los Eucaliptos (95 Ha - Consociada Festuca)</option>
+<option value="manga">Corrales Principales / Manga de Trabajo</option>
+</select>
+<span class="material-symbols-outlined absolute right-2.5 top-3 text-on-surface-variant pointer-events-none text-[20px]">expand_more</span>
+</div>
+</div>
+<!-- Fecha y Turno -->
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-sm">
+<div class="space-y-1">
+<label class="block font-label-md text-label-md text-primary" for="fecha-mov">Fecha</label>
+<input class="w-full h-11 px-3 rounded-lg bg-surface-container-lowest text-on-surface font-body-md text-body-md focus:outline-none focus:bg-surface-container-low" id="fecha-mov" type="date" value="2024-10-18"/>
+</div>
+<div class="space-y-1">
+<label class="block font-label-md text-label-md text-primary" for="turno-mov">Turno de Arreo</label>
+<div class="relative">
+<select class="w-full h-11 px-3 pr-8 rounded-lg bg-surface-container-lowest text-on-surface font-body-md text-body-md focus:outline-none focus:bg-surface-container-low appearance-none" id="turno-mov">
+<option selected="">Hoy - Mañana (Fresco)</option>
+<option>Hoy - Tarde (Caída del Sol)</option>
+<option>Turno Inmediato (Emergencia)</option>
+</select>
+<span class="material-symbols-outlined absolute right-2.5 top-3 text-on-surface-variant pointer-events-none text-[20px]">schedule</span>
+</div>
+</div>
+</div>
+<!-- Observaciones -->
+<div class="space-y-1">
+<label class="block font-label-md text-label-md text-primary" for="obs-arreo">Observaciones de Arreo</label>
+<input class="w-full h-11 px-3 rounded-lg bg-surface-container-lowest text-on-surface font-body-md text-body-md focus:outline-none focus:bg-surface-container-low" id="obs-arreo" type="text" value="Traslado sin novedades a paso firme. Tranqueras revisadas."/>
+</div>
+<!-- Submit Button -->
+<button class="w-full flex items-center justify-center gap-2 h-12 rounded-lg bg-secondary text-on-secondary font-headline-sm text-headline-sm hover:bg-on-secondary-container shadow-md transition-all active:scale-[0.99] mt-space-sm" type="submit">
+<span class="material-symbols-outlined text-[24px]">add_circle</span>
+<span>+ Registrar Movimiento de Lote</span>
+</button>
+</form>
+</div>
+</div>
+<!-- COLUMNA DERECHA (7 cols): Animales Asignados + Trazabilidad & Historial -->
+<div class="lg:col-span-7 space-y-space-md">
+<!-- Tarjeta 3: Animales Pertenecientes al Lote -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm space-y-space-sm">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm pb-space-sm bg-surface-container-low/40 -mx-space-md -mt-space-md px-space-md pt-space-md rounded-t-xl">
+<div>
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[22px]">format_list_bulleted</span>
+<h3 class="font-title-md text-title-md text-primary">Animales Pertenecientes al Lote</h3>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">142 animales identificados con caravana oficial</p>
+</div>
+<button class="inline-flex items-center gap-1.5 px-3 py-2 rounded-lg bg-primary-container text-on-primary font-label-md text-label-md hover:bg-primary transition-all self-start sm:self-auto">
+<span class="material-symbols-outlined text-[18px] text-secondary-fixed">add</span>
+<span>+ Asignar Animal al Lote</span>
+</button>
+</div>
+<!-- Quick search toolbar -->
+<div class="flex items-center gap-space-sm pt-space-xs">
+<div class="relative flex-1">
+<span class="material-symbols-outlined absolute left-3 top-2.5 text-on-surface-variant text-[20px]">search</span>
+<input class="w-full h-10 pl-10 pr-3 rounded-lg bg-surface-container-high/60 text-on-surface font-body-md text-body-md focus:bg-surface-container-lowest focus:outline-none transition-colors" placeholder="Buscar por caravana (ej. AR-8492) o apodo..." type="search"/>
+</div>
+<button class="h-10 px-3 rounded-lg bg-surface-container-low text-secondary font-label-md text-label-md flex items-center gap-1 hover:bg-surface-container">
+<span class="material-symbols-outlined text-[18px]">filter_list</span>
+<span class="hidden sm:inline">Filtros</span>
+</button>
+</div>
+<!-- Table of Animals -->
+<div class="overflow-x-auto rounded-lg bg-surface-container-lowest">
+<table class="w-full text-left font-body-md text-body-md">
+<thead class="bg-surface-container-high/70 text-primary font-label-sm text-label-sm uppercase tracking-wider">
+<tr>
+<th class="py-3 px-3">Caravana</th>
+<th class="py-3 px-3">Apodo / Seña</th>
+<th class="py-3 px-3">Categoría</th>
+<th class="py-3 px-3 text-right">Último Peso</th>
+<th class="py-3 px-3 text-center">Estado</th>
+<th class="py-3 px-3 text-center">Acción</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-container">
+<!-- Animal 1 -->
+<tr class="hover:bg-surface-container-low/50 transition-colors">
+<td class="py-3 px-3">
+<span class="font-label-lg text-label-lg text-primary font-bold">AR-8492</span>
+</td>
+<td class="py-3 px-3">
+<span class="font-body-md text-body-md text-on-surface">Pampero 44</span>
+</td>
+<td class="py-3 px-3">
+<span class="inline-flex items-center px-2 py-0.5 rounded bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm">Novillo</span>
+</td>
+<td class="py-3 px-3 text-right">
+<span class="font-headline-sm text-headline-sm text-primary font-semibold">418</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">kg</span>
+</td>
+<td class="py-3 px-3 text-center">
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+                      En Lote
+                    </span>
+</td>
+<td class="py-3 px-3 text-center">
+<button class="p-1 text-on-surface-variant hover:text-primary rounded hover:bg-surface-container" title="Ver ficha individual">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+</button>
+</td>
+</tr>
+<!-- Animal 2 -->
+<tr class="hover:bg-surface-container-low/50 transition-colors">
+<td class="py-3 px-3">
+<span class="font-label-lg text-label-lg text-primary font-bold">AR-8493</span>
+</td>
+<td class="py-3 px-3">
+<span class="font-body-md text-body-md text-on-surface">Pampero 45</span>
+</td>
+<td class="py-3 px-3">
+<span class="inline-flex items-center px-2 py-0.5 rounded bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm">Novillo</span>
+</td>
+<td class="py-3 px-3 text-right">
+<span class="font-headline-sm text-headline-sm text-primary font-semibold">425</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">kg</span>
+</td>
+<td class="py-3 px-3 text-center">
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+                      En Lote
+                    </span>
+</td>
+<td class="py-3 px-3 text-center">
+<button class="p-1 text-on-surface-variant hover:text-primary rounded hover:bg-surface-container" title="Ver ficha individual">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+</button>
+</td>
+</tr>
+<!-- Animal 3 -->
+<tr class="hover:bg-surface-container-low/50 transition-colors">
+<td class="py-3 px-3">
+<span class="font-label-lg text-label-lg text-primary font-bold">AR-8494</span>
+</td>
+<td class="py-3 px-3">
+<span class="font-body-md text-body-md text-on-surface">Relincho</span>
+</td>
+<td class="py-3 px-3">
+<span class="inline-flex items-center px-2 py-0.5 rounded bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm">Novillo</span>
+</td>
+<td class="py-3 px-3 text-right">
+<span class="font-headline-sm text-headline-sm text-primary font-semibold">405</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">kg</span>
+</td>
+<td class="py-3 px-3 text-center">
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+                      En Lote
+                    </span>
+</td>
+<td class="py-3 px-3 text-center">
+<button class="p-1 text-on-surface-variant hover:text-primary rounded hover:bg-surface-container" title="Ver ficha individual">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+</button>
+</td>
+</tr>
+<!-- Animal 4 -->
+<tr class="hover:bg-surface-container-low/50 transition-colors">
+<td class="py-3 px-3">
+<span class="font-label-lg text-label-lg text-primary font-bold">AR-8510</span>
+</td>
+<td class="py-3 px-3">
+<span class="font-body-md text-body-md text-on-surface">Mocho 12</span>
+</td>
+<td class="py-3 px-3">
+<span class="inline-flex items-center px-2 py-0.5 rounded bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm">Novillo</span>
+</td>
+<td class="py-3 px-3 text-right">
+<span class="font-headline-sm text-headline-sm text-primary font-semibold">430</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">kg</span>
+</td>
+<td class="py-3 px-3 text-center">
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+                      En Lote
+                    </span>
+</td>
+<td class="py-3 px-3 text-center">
+<button class="p-1 text-on-surface-variant hover:text-primary rounded hover:bg-surface-container" title="Ver ficha individual">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+</button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Simple Paginator -->
+<div class="flex items-center justify-between pt-space-xs text-on-surface-variant font-body-sm text-body-sm">
+<span>Mostrando <strong>4</strong> de <strong>142</strong> animales en este lote</span>
+<div class="flex items-center gap-1">
+<button class="w-8 h-8 rounded bg-surface-container flex items-center justify-center text-primary disabled:opacity-40" disabled="">
+<span class="material-symbols-outlined text-[16px]">chevron_left</span>
+</button>
+<span class="px-2 py-1 bg-primary text-on-primary rounded font-label-sm text-label-sm">1</span>
+<button class="w-8 h-8 rounded bg-surface-container flex items-center justify-center text-primary hover:bg-surface-container-high">
+<span class="material-symbols-outlined text-[16px]">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Tarjeta 4: Historial de Movimientos y Registro de Anulación (Trazabilidad Estricta) -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm space-y-space-md">
+<div class="flex items-center justify-between pb-space-sm bg-surface-container-low/40 -mx-space-md -mt-space-md px-space-md pt-space-md rounded-t-xl">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[22px]">history_edu</span>
+<div>
+<h3 class="font-title-md text-title-md text-primary">Historial de Movimientos y Registro de Anulación</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Trazabilidad inalterable de traslados, pesajes y cancelaciones</p>
+</div>
+</div>
+<span class="font-label-sm text-label-sm text-primary bg-primary-fixed px-2 py-0.5 rounded font-bold">AUDITORÍA</span>
+</div>
+<!-- Sequence of Movements -->
+<div class="space-y-space-sm">
+<!-- Item 1: Activo y Vigente -->
+<div class="p-space-md rounded-xl bg-surface-container-low/60 space-y-space-xs">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+<div class="flex items-center gap-space-xs">
+<div class="w-8 h-8 rounded-full bg-secondary text-on-secondary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[18px]">sync_alt</span>
+</div>
+<div>
+<h4 class="font-label-lg text-label-lg text-primary">Rotación desde Potrero 1 a P-04 Bajadón</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                      Fecha: <strong class="text-on-surface">12 Oct 2024 • 08:15 hs</strong> • Realizado por: <span class="font-label-md text-label-md text-primary">Don Juan Pérez</span>
+</p>
+</div>
+</div>
+<button class="inline-flex items-center gap-1 px-2.5 py-1 rounded bg-error-container text-on-error-container font-label-sm text-label-sm hover:bg-error hover:text-on-error transition-colors self-start sm:self-auto">
+<span class="material-symbols-outlined text-[14px]">cancel</span>
+<span>Anular Movimiento</span>
+</button>
+</div>
+<div class="text-on-surface-variant font-body-sm text-body-sm pl-10">
+<span>Observación de tranquera: "Lote completo 142 animales trasladados sin rezagados. Alfalfa con buen rebrote."</span>
+</div>
+</div>
+<!-- Item 2: ANULADO - Con recuadro explicativo de auditoría estricta -->
+<div class="p-space-md rounded-xl bg-surface-container-high/40 space-y-space-xs">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+<div class="flex items-center gap-space-xs">
+<div class="w-8 h-8 rounded-full bg-error-container text-on-error-container flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[18px]">block</span>
+</div>
+<div>
+<div class="flex items-center gap-2">
+<h4 class="font-label-lg text-label-lg text-on-surface line-through opacity-75">Traslado erróneo a Corral de Manga</h4>
+<span class="px-2 py-0.5 rounded-full bg-error-container text-on-error-container font-label-sm text-label-sm font-bold">
+                        ANULADO
+                      </span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                      Fecha del movimiento original: <strong>05 Oct 2024 • 10:45 hs</strong>
+</p>
+</div>
+</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant self-start sm:self-auto flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-error">verified_user</span>
+<span>Registro Bloqueado</span>
+</div>
+</div>
+<!-- Recuadro explicativo estricto de anulación (conforme requisitos del sistema) -->
+<div class="mt-2 ml-2 sm:ml-10 p-space-sm rounded-lg bg-surface-container-lowest shadow-sm space-y-1">
+<div class="flex items-center gap-1.5 text-error font-label-sm text-label-sm uppercase">
+<span class="material-symbols-outlined text-[16px]">info</span>
+<span>Acta de Anulación Trazable en Servidor</span>
+</div>
+<p class="font-body-md text-body-md text-primary font-medium">
+                  ANULADO por <span class="font-bold text-primary">Don Juan Pérez</span> el <strong>05/10/2024 a las 11:30 hs</strong>.
+                </p>
+<p class="font-body-sm text-body-sm text-on-surface-variant bg-surface-container-low p-2 rounded">
+<strong class="text-primary">Motivo de anulación registrado:</strong> "Error de digitación en tranquera; los animales continuaban en pastura P-04 sin encierro. Se corrigió inmediatamente sin alterar pesajes de control."
+                </p>
+</div>
+</div>
+<!-- Item 3: Pesaje Anterior Histórico -->
+<div class="p-space-md rounded-xl bg-surface-container-lowest space-y-space-xs">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+<div class="flex items-center gap-space-xs">
+<div class="w-8 h-8 rounded-full bg-surface-container-high text-primary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[18px]">scale</span>
+</div>
+<div>
+<h4 class="font-label-lg text-label-lg text-primary">Pesaje General de Entrada a Invernada</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                      Fecha: <strong>15 Ene 2024 • 07:00 hs</strong> • Operador: <strong>Don Juan Pérez</strong> • Promedio inicial: <strong>312 kg</strong>
+</p>
+</div>
+</div>
+<span class="font-label-sm text-label-sm text-secondary bg-secondary-container/40 px-2 py-1 rounded self-start sm:self-auto">
+                  Consolidado
+                </span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Banner Operativo de Campo (Autonomía Total) -->
+<div class="w-full bg-primary text-on-primary rounded-xl p-space-md shadow-md flex flex-col md:flex-row items-center justify-between gap-space-md">
+<div class="flex items-center gap-space-md">
+<div class="w-12 h-12 rounded-xl bg-primary-container text-secondary-fixed flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[30px]">wifi_off</span>
+</div>
+<div>
+<h4 class="font-title-md text-title-md text-on-primary flex items-center gap-2">
+            Modo de Campo Activo • Sincronización Automática Local
+            <span class="w-2.5 h-2.5 rounded-full bg-secondary-fixed animate-pulse"></span>
+</h4>
+<p class="font-body-sm text-body-sm text-primary-fixed-dim">
+            Base de Datos Rural Segura operando en el servidor del casco. Toda operación queda respaldada localmente sin depender de señal celular o internet exterior.
+          </p>
+</div>
+</div>
+<div class="flex items-center gap-space-sm shrink-0">
+<button class="inline-flex items-center gap-1.5 px-space-md py-2 rounded-lg bg-surface-container-lowest/10 text-on-primary font-label-md text-label-md hover:bg-surface-container-lowest/20 transition-all">
+<span class="material-symbols-outlined text-[18px]">sync</span>
+<span>Verificar Réplica</span>
+</button>
+<button class="inline-flex items-center gap-1.5 px-space-md py-2 rounded-lg bg-secondary text-on-secondary font-label-md text-label-md hover:bg-on-secondary-container transition-all">
+<span class="material-symbols-outlined text-[18px]">download</span>
+<span>Descargar Planilla de Manga</span>
+</button>
+</div>
+</div>
+</div>
+</div></main><footer class="w-full bg-surface-container-low py-space-lg"><div class="w-full px-margin flex flex-col sm:flex-row items-center justify-between gap-space-sm font-body-sm text-body-sm text-on-surface-variant"><div class="flex items-center gap-space-xs"><span class="font-label-sm text-label-sm text-primary">SIGGAF</span><span>•</span><span>Sistema Inteligente de Gestión Ganadera Argentina</span></div><div><span>Operación Continua • Servidor de Campo</span></div></div></footer></body></html>

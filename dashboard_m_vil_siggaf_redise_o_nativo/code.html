@@ -1,0 +1,336 @@
+<!DOCTYPE html><html lang="es"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport">
+<title>SIGGAF - Gestión Ganadera</title>
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "on-surface": "#121e17",
+            "surface-bright": "#f4fbf5",
+            "surface-container": "#e4efe6",
+            "surface": "#f5faf6",
+            "primary-container": "#1e3a2b",
+            "secondary": "#196d24",
+            "secondary-container": "#d9f7d4",
+            "outline": "#727973",
+            "background": "#f4fbf5",
+            "surface-container-lowest": "#ffffff",
+            "outline-variant": "#dbe3dc",
+            "surface-variant": "#dbe6dd",
+            "primary": "#0e291b",
+            "primary-dark": "#072417",
+            "emerald-agro": "#107c41",
+            "agro-accent": "#259f52"
+          },
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif']
+          }
+        }
+      }
+    };
+  </script>
+<style>
+    @layer base {
+      html, body {
+        width: 100vw;
+        margin: 0;
+        padding: 0;
+        font-family: 'Plus Jakarta Sans', sans-serif;
+        background-color: #f5faf6;
+        -webkit-tap-highlight-color: transparent;
+      }
+      body {
+        overscroll-behavior-y: none;
+      }
+      .pb-safe {
+        padding-bottom: max(1rem, env(safe-area-inset-bottom));
+      }
+      .pt-safe {
+        padding-top: max(0.75rem, env(safe-area-inset-top));
+      }
+    }
+    ::-webkit-scrollbar {
+      display: none;
+    }
+  </style>
+</head>
+<body class="bg-[#f5faf6] text-on-surface antialiased flex flex-col min-h-screen selection:bg-emerald-100">
+<!-- Header Superior Limpio & Moderno -->
+<header class="sticky top-0 w-full z-40 pt-safe bg-[#f5faf6]/90 backdrop-blur-md border-b border-black/[0.04]">
+<div class="h-16 px-4 flex items-center justify-between">
+<!-- Marca & Establecimiento -->
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-2xl bg-primary flex items-center justify-center shadow-sm shadow-primary/20 text-white font-extrabold text-sm tracking-wider">
+<svg class="w-5 h-5 text-emerald-400" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24">
+<path d="M3.75 6A2.25 2.25 0 016 3.75h2.25A2.25 2.25 0 0110.5 6v2.25a2.25 2.25 0 01-2.25 2.25H6a2.25 2.25 0 01-2.25-2.25V6zM3.75 15.75A2.25 2.25 0 016 13.5h2.25a2.25 2.25 0 012.25 2.25V18a2.25 2.25 0 01-2.25 2.25H6A2.25 2.25 0 013.75 18v-2.25zM13.5 6a2.25 2.25 0 012.25-2.25H18A2.25 2.25 0 0120.25 6v2.25A2.25 2.25 0 0118 10.5h-2.25a2.25 2.25 0 01-2.25-2.25V6zM13.5 15.75a2.25 2.25 0 012.25-2.25H18a2.25 2.25 0 012.25 2.25V18A2.25 2.25 0 0118 20.25h-2.25A2.25 2.25 0 0113.5 18v-2.25z" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</div>
+<div>
+<div class="flex items-center gap-2">
+<span class="text-[15px] font-bold text-primary tracking-tight">SIGGAF</span>
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-[10px] font-semibold bg-emerald-100/70 text-emerald-800 border border-emerald-200/50">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-600 animate-pulse"></span>
+              Offline
+            </span>
+</div>
+<p class="text-xs font-semibold text-stone-500">Estancia La Juanita</p>
+</div>
+</div>
+<!-- Acciones de perfil / estado -->
+<div class="flex items-center gap-2.5">
+<button aria-label="Notificaciones" class="w-9 h-9 rounded-full bg-white border border-stone-200/70 shadow-sm flex items-center justify-center text-stone-600 active:scale-95 transition-transform">
+<svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+<path d="M14.857 17.082a23.848 23.848 0 005.454-1.31A8.967 8.967 0 0118 9.75v-.7V9A6 6 0 006 9v.75a8.967 8.967 0 01-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 01-5.714 0m5.714 0a3 3 0 11-5.714 0" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</button>
+<div class="w-9 h-9 rounded-full bg-gradient-to-tr from-stone-800 to-stone-600 text-white flex items-center justify-center font-bold text-xs shadow-sm ring-2 ring-white">
+          DJ
+        </div>
+</div>
+</div>
+</header>
+<!-- Contenido Principal Mobile -->
+<main class="flex-1 w-full max-w-md mx-auto px-4 pt-3 pb-28 flex flex-col gap-4">
+<!-- Tarjeta Saludo & Clima de Campo Integrada -->
+<div class="bg-white rounded-2xl p-4 shadow-sm border border-stone-100 flex flex-col gap-3.5">
+<div class="flex items-center justify-between">
+<div>
+<span class="text-xs font-semibold uppercase tracking-wider text-emerald-800 bg-emerald-50 px-2 py-0.5 rounded-md">Encargado General</span>
+<h1 class="text-xl font-bold text-primary tracking-tight mt-1">Buen día, Don Juan</h1>
+</div>
+<div class="w-10 h-10 rounded-xl bg-amber-50 flex items-center justify-center text-amber-500">
+<svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+<circle cx="12" cy="12" r="4"></circle>
+<path d="M12 2v2m0 16v2M4.93 4.93l1.41 1.41m11.32 11.32l1.41 1.41M2 12h2m16 0h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</div>
+</div>
+<!-- Fila de Clima y Pluviómetro -->
+<div class="grid grid-cols-2 gap-2 pt-2 border-t border-stone-100">
+<div class="flex items-center gap-2.5 bg-[#f8fbf8] p-2.5 rounded-xl border border-stone-100/60">
+<div class="w-8 h-8 rounded-lg bg-emerald-100/60 flex items-center justify-center text-emerald-800 flex-shrink-0">
+<svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+<path d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</div>
+<div class="min-w-0">
+<p class="text-[11px] font-medium text-stone-400 leading-tight">Casco Central</p>
+<p class="text-xs font-bold text-stone-800 leading-tight mt-0.5">22°C Soleado</p>
+</div>
+</div>
+<div class="flex items-center gap-2.5 bg-[#f8fbf8] p-2.5 rounded-xl border border-stone-100/60">
+<div class="w-8 h-8 rounded-lg bg-sky-100/70 flex items-center justify-center text-sky-700 flex-shrink-0">
+<svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+<path d="M12 2.69l5.66 5.66a8 8 0 11-11.31 0z" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</div>
+<div class="min-w-0">
+<p class="text-[11px] font-medium text-stone-400 leading-tight">Pluviómetro</p>
+<p class="text-xs font-bold text-stone-800 leading-tight mt-0.5">48 mm</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Buscador Táctil con Botón Lector Caravana RFID / QR -->
+<div class="relative flex items-center">
+<div class="absolute left-3.5 pointer-events-none text-stone-400">
+<svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+<path d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</div>
+<input class="w-full h-12 pl-11 pr-14 bg-white text-stone-800 placeholder:text-stone-400 text-sm font-medium rounded-xl border border-stone-200 shadow-sm focus:outline-none focus:ring-2 focus:ring-emerald-600/20 focus:border-emerald-600 transition-all" placeholder="Buscar caravana, RP o categoría..." type="text">
+<button class="absolute right-1.5 h-9 px-2.5 rounded-lg bg-primary hover:bg-primary-dark text-white flex items-center gap-1 text-xs font-semibold shadow-sm active:scale-95 transition-all" title="Escanear Caravana o QR" type="button">
+<svg class="w-4 h-4 text-emerald-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+<path d="M3.75 4.875c0-.621.504-1.125 1.125-1.125h4.5c.621 0 1.125.504 1.125 1.125v4.5c0 .621-.504 1.125-1.125 1.125h-4.5A1.125 1.125 0 013.75 9.375v-4.5zM3.75 14.625c0-.621.504-1.125 1.125-1.125h4.5c.621 0 1.125.504 1.125 1.125v4.5c0 .621-.504 1.125-1.125 1.125h-4.5a1.125 1.125 0 01-1.125-1.125v-4.5zM13.5 4.875c0-.621.504-1.125 1.125-1.125h4.5c.621 0 1.125.504 1.125 1.125v4.5c0 .621-.504 1.125-1.125 1.125h-4.5A1.125 1.125 0 0113.5 9.375v-4.5zM14.25 14.25h1.5v1.5h-1.5zM18.75 14.25h1.5v1.5h-1.5zM16.5 16.5h1.5v1.5h-1.5zM14.25 18.75h1.5v1.5h-1.5zM18.75 18.75h1.5v1.5h-1.5z" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+<span>RFID</span>
+</button>
+</div>
+<!-- Acciones Hero Principales de Campo -->
+<div class="grid grid-cols-1 gap-2.5">
+<!-- CTA Primario: Cargar en Manga -->
+<button class="w-full bg-gradient-to-br from-[#0c2417] via-[#123623] to-[#091f13] text-white p-4 rounded-2xl shadow-md shadow-emerald-950/20 active:scale-[0.99] transition-transform text-left flex items-center justify-between group border border-emerald-900/40" type="button">
+<div class="flex items-center gap-3.5">
+<div class="w-12 h-12 rounded-xl bg-emerald-500/20 border border-emerald-400/30 flex items-center justify-center text-emerald-300 group-hover:scale-105 transition-transform flex-shrink-0">
+<svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24">
+<path d="M12 3v18m-6-6l6-6 6 6M6 9h12" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</div>
+<div>
+<div class="flex items-center gap-2">
+<span class="font-bold text-base text-white">Cargar en Manga</span>
+<span class="text-[10px] font-bold px-1.5 py-0.5 rounded bg-emerald-500/30 text-emerald-200 uppercase tracking-wide">Rápido</span>
+</div>
+<p class="text-xs text-emerald-200/75 mt-0.5">Pesaje express, control sanitario y alta</p>
+</div>
+</div>
+<div class="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center text-white/80">
+<svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24">
+<path d="M8.25 4.5l7.5 7.5-7.5 7.5" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</div>
+</button>
+<!-- CTA Secundario: Mover Hacienda -->
+<button class="w-full bg-white p-4 rounded-2xl shadow-sm border border-stone-200/80 active:bg-stone-50 transition-colors text-left flex items-center justify-between group" type="button">
+<div class="flex items-center gap-3.5">
+<div class="w-12 h-12 rounded-xl bg-stone-100 flex items-center justify-center text-emerald-700 group-hover:bg-emerald-50 transition-colors flex-shrink-0">
+<svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+<path d="M7.5 21L3 16.5m0 0L7.5 12M3 16.5h13.5m0-13.5L21 7.5m0 0L16.5 12M21 7.5H7.5" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</div>
+<div>
+<span class="font-bold text-sm text-stone-900 block">Mover Hacienda de Potrero</span>
+<p class="text-xs text-stone-500 mt-0.5">Rotación de pasturas y balance de carga</p>
+</div>
+</div>
+<div class="w-8 h-8 rounded-full bg-stone-50 flex items-center justify-center text-stone-400 group-hover:text-stone-700 transition-colors">
+<svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24">
+<path d="M8.25 4.5l7.5 7.5-7.5 7.5" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</div>
+</button>
+</div>
+<!-- Indicadores Clave del Establecimiento -->
+<div>
+<div class="flex items-center justify-between mb-2 px-0.5">
+<span class="text-xs font-bold text-stone-500 uppercase tracking-wider">Estado de Campo</span>
+<span class="text-xs font-semibold text-emerald-700">Actualizado hace 5m</span>
+</div>
+<div class="grid grid-cols-2 gap-3">
+<!-- Hacienda Total -->
+<div class="bg-white p-3.5 rounded-2xl border border-stone-100 shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between">
+<span class="text-xs font-semibold text-stone-500">Hacienda</span>
+<div class="w-7 h-7 rounded-lg bg-emerald-50 text-emerald-700 flex items-center justify-center">
+<svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+<path d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</div>
+</div>
+<div class="mt-2.5">
+<span class="text-2xl font-extrabold text-stone-900 tracking-tight block">840</span>
+<span class="text-xs font-semibold text-emerald-700">Cabezas registradas</span>
+</div>
+<p class="text-[11px] text-stone-400 mt-2 pt-2 border-t border-stone-100">8 lotes activos</p>
+</div>
+<!-- Potreros -->
+<div class="bg-white p-3.5 rounded-2xl border border-stone-100 shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between">
+<span class="text-xs font-semibold text-stone-500">Potreros</span>
+<div class="w-7 h-7 rounded-lg bg-stone-100 text-stone-700 flex items-center justify-center">
+<svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+<path d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</div>
+</div>
+<div class="mt-2.5">
+<div class="flex items-baseline gap-1">
+<span class="text-2xl font-extrabold text-stone-900 tracking-tight">6</span>
+<span class="text-sm font-semibold text-stone-400">/ 8</span>
+</div>
+<span class="text-xs font-semibold text-stone-700">En pastoreo</span>
+</div>
+<div class="flex items-center gap-1.5 text-[11px] text-stone-500 mt-2 pt-2 border-t border-stone-100">
+<span class="w-1.5 h-1.5 rounded-full bg-amber-500"></span>
+<span>2 en descanso</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Alerta Sanitaria de Pastoreo -->
+<div class="bg-amber-50/80 border border-amber-200/70 rounded-2xl p-3.5 shadow-sm flex items-start gap-3">
+<div class="w-9 h-9 rounded-xl bg-amber-500 text-white flex items-center justify-center flex-shrink-0 shadow-sm shadow-amber-500/20 mt-0.5">
+<svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+<path d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126zM12 15.75h.007v.008H12v-.008z" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex items-center justify-between gap-1">
+<span class="text-xs font-bold text-amber-900 uppercase tracking-wide">Aviso Sanitario</span>
+<span class="text-[11px] font-bold text-amber-800 bg-amber-200/60 px-2 py-0.5 rounded-full">en 12 días</span>
+</div>
+<p class="text-xs text-amber-950 font-medium mt-1 leading-snug">
+          Campaña de <strong class="font-bold">Fiebre Aftosa</strong> programada en <strong class="font-bold">Potrero El Trébol</strong> (142 vientres).
+        </p>
+</div>
+</div>
+<!-- Atajos Rápidos de Gestión -->
+<div>
+<div class="flex items-center justify-between mb-2 px-0.5">
+<span class="text-xs font-bold text-stone-500 uppercase tracking-wider">Manga Rápida</span>
+<button class="text-xs font-bold text-emerald-700 hover:underline">Ver historial</button>
+</div>
+<div class="grid grid-cols-2 gap-2.5">
+<button class="h-14 px-3.5 bg-white rounded-xl border border-stone-200/80 shadow-sm flex items-center gap-3 text-left active:bg-stone-50 transition-colors" type="button">
+<div class="w-8 h-8 rounded-lg bg-emerald-50 text-emerald-700 flex items-center justify-center flex-shrink-0">
+<svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+<path d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m3.75 9v6m3-3H9m1.5-12H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</div>
+<div class="min-w-0">
+<p class="text-xs font-bold text-stone-900 truncate">Tratamiento</p>
+<p class="text-[11px] text-stone-500 truncate">Dosis y remedio</p>
+</div>
+</button>
+<button class="h-14 px-3.5 bg-white rounded-xl border border-stone-200/80 shadow-sm flex items-center gap-3 text-left active:bg-stone-50 transition-colors" type="button">
+<div class="w-8 h-8 rounded-lg bg-emerald-50 text-emerald-700 flex items-center justify-center flex-shrink-0">
+<svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+<path d="M12 4.5v15m7.5-7.5h-15" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</div>
+<div class="min-w-0">
+<p class="text-xs font-bold text-stone-900 truncate">Nacimiento</p>
+<p class="text-[11px] text-stone-500 truncate">Anotar ternero</p>
+</div>
+</button>
+</div>
+</div>
+</main>
+<!-- Barra de Navegación Inferior Flotante / Fija Prolija -->
+<nav class="fixed bottom-0 w-full z-40 pb-safe bg-white/95 backdrop-blur-lg border-t border-stone-200/80 shadow-[0_-4px_20px_rgba(0,0,0,0.03)]">
+<div class="max-w-md mx-auto h-16 px-3 flex justify-around items-center">
+<!-- Inicio (Activo) -->
+<a class="flex flex-col items-center justify-center gap-1 w-14 text-emerald-700 font-bold" href="#">
+<svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2.3" viewBox="0 0 24 24">
+<path d="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+<span class="text-[10px] tracking-tight">Inicio</span>
+</a>
+<!-- Animales -->
+<a class="flex flex-col items-center justify-center gap-1 w-14 text-stone-400 hover:text-stone-700 transition-colors" href="#">
+<svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+<path d="M3.75 12h16.5m-16.5 3.75h16.5M3.75 19.5h16.5M5.625 4.5h12.75a1.875 1.875 0 010 3.75H5.625a1.875 1.875 0 010-3.75z" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+<span class="text-[10px] tracking-tight">Animales</span>
+</a>
+<!-- Potreros -->
+<a class="flex flex-col items-center justify-center gap-1 w-14 text-stone-400 hover:text-stone-700 transition-colors" href="#">
+<svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+<path d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+<span class="text-[10px] tracking-tight">Potreros</span>
+</a>
+<!-- Lotes -->
+<a class="flex flex-col items-center justify-center gap-1 w-14 text-stone-400 hover:text-stone-700 transition-colors" href="#">
+<svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+<path d="M7.5 21L3 16.5m0 0L7.5 12M3 16.5h13.5m0-13.5L21 7.5m0 0L16.5 12M21 7.5H7.5" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+<span class="text-[10px] tracking-tight">Lotes</span>
+</a>
+<!-- Ajustes -->
+<a class="flex flex-col items-center justify-center gap-1 w-14 text-stone-400 hover:text-stone-700 transition-colors" href="#">
+<svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+<path d="M10.5 6h9.75M10.5 6a1.5 1.5 0 11-3 0m3 0a1.5 1.5 0 10-3 0M3.75 6H7.5m3 12h9.75m-9.75 0a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m-3.75 0H7.5m9-6h3.75m-3.75 0a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m-9.75 0h9.75" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+<span class="text-[10px] tracking-tight">Ajustes</span>
+</a>
+</div>
+</nav>
+</body></html>

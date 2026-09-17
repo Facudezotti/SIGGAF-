@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+
+<html lang="es"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = {
+  darkMode: "class",
+  theme: {
+    extend: {
+      "colors": {
+        "tertiary-container": "#483003",
+        "inverse-primary": "#aeceb9",
+        "surface-container-low": "#e8f7eb",
+        "tertiary-fixed": "#ffdeae",
+        "outline-variant": "#c2c8c2",
+        "primary": "#072417",
+        "secondary-container": "#a2f79c",
+        "on-error-container": "#93000a",
+        "surface": "#eefdf1",
+        "on-primary": "#ffffff",
+        "on-surface": "#121e17",
+        "surface-container": "#e3f2e5",
+        "secondary": "#196d24",
+        "background": "#eefdf1",
+        "primary-fixed-dim": "#aeceb9",
+        "inverse-on-surface": "#e6f5e8",
+        "on-primary-container": "#85a490",
+        "surface-container-high": "#ddece0",
+        "on-secondary-fixed-variant": "#005313",
+        "inverse-surface": "#26332b",
+        "primary-container": "#1e3a2b",
+        "outline": "#727973",
+        "on-error": "#ffffff",
+        "surface-dim": "#cfded2",
+        "tertiary": "#2d1c00",
+        "on-tertiary-fixed": "#281900",
+        "on-primary-fixed": "#042013",
+        "on-primary-fixed-variant": "#304d3d",
+        "secondary-fixed": "#a2f79c",
+        "surface-bright": "#eefdf1",
+        "on-secondary-container": "#21732a",
+        "surface-container-highest": "#d7e6da",
+        "error-container": "#ffdad6",
+        "secondary-fixed-dim": "#87da83",
+        "primary-fixed": "#caead4",
+        "error": "#ba1a1a",
+        "surface-container-lowest": "#ffffff",
+        "on-tertiary-container": "#bb9861",
+        "tertiary-fixed-dim": "#e7c187",
+        "on-surface-variant": "#424843",
+        "surface-variant": "#d7e6da",
+        "on-background": "#121e17",
+        "on-secondary-fixed": "#002204",
+        "on-secondary": "#ffffff",
+        "surface-tint": "#486554",
+        "on-tertiary": "#ffffff",
+        "on-tertiary-fixed-variant": "#5c4214"
+      },
+      "borderRadius": {
+        "DEFAULT": "0.125rem",
+        "lg": "0.25rem",
+        "xl": "0.5rem",
+        "full": "0.75rem"
+      },
+      "spacing": {
+        "gutter": "1.25rem",
+        "margin-mobile": "1rem",
+        "space-md": "1rem",
+        "space-sm": "0.5rem",
+        "space-xs": "0.25rem",
+        "space-xl": "2.5rem",
+        "gutter-mobile": "0.75rem",
+        "margin": "2rem",
+        "space-lg": "1.5rem"
+      },
+      "fontFamily": {
+        "body-sm": ["Plus Jakarta Sans"],
+        "body-md": ["Plus Jakarta Sans"],
+        "label-md": ["Plus Jakarta Sans"],
+        "headline-sm": ["Plus Jakarta Sans"],
+        "label-lg": ["Plus Jakarta Sans"],
+        "label-sm": ["Plus Jakarta Sans"],
+        "body-lg": ["Plus Jakarta Sans"],
+        "headline-md": ["Plus Jakarta Sans"],
+        "title-md": ["Plus Jakarta Sans"],
+        "headline-lg-mobile": ["Plus Jakarta Sans"],
+        "headline-lg": ["Plus Jakarta Sans"]
+      },
+      "fontSize": {
+        "body-sm": ["12px", {"lineHeight": "16px", "fontWeight": "400"}],
+        "body-md": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+        "label-md": ["12px", {"lineHeight": "16px", "fontWeight": "600"}],
+        "headline-sm": ["20px", {"lineHeight": "28px", "fontWeight": "600"}],
+        "label-lg": ["14px", {"lineHeight": "20px", "fontWeight": "600"}],
+        "label-sm": ["11px", {"lineHeight": "14px", "fontWeight": "700"}],
+        "body-lg": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+        "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+        "title-md": ["16px", {"lineHeight": "24px", "fontWeight": "600"}],
+        "headline-lg-mobile": ["26px", {"lineHeight": "34px", "fontWeight": "700"}],
+        "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "700"}]
+      }
+    }
+  }
+}</script></head><body class="bg-surface font-body-md text-body-md text-on-surface antialiased"><header class="fixed top-0 w-full z-50 bg-surface-container-lowest/95 backdrop-blur-md shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 w-full px-margin flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-lg"><div class="flex items-center gap-space-sm"><img alt="Brand logo. - Primary color: #1e3a2b
+- Font: plusJakartaSans
+- Mode: light
+- Roundness: rounded-sm
+" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1U1uDRhUzi4Eh6NAUZVWU4mqL2j6cP71Q0xVF2m8MRtxAWub2id0Z9na2CoOC4uOyEze1Q5hTP-FLdC5ECwtmjGYfNaFWZIcGJyjcEoHCz83dDCJgHd5TliqU4f5ood1fcV-3BBJsKZcSLKvtn7h1BYseaZ14FnnRbrnxJzU20AHngr13bsf-9NR0Qb3QuURTJtkL6LiUZKGnHtQZQjPonDdN2O5t4ryPqfwcuI0Q6YO2Rm21QZbhWCLr4"/><div class="flex flex-col"><span class="font-title-md text-title-md text-primary leading-none tracking-tight">SIGGAF</span><span class="font-label-sm text-label-sm text-on-surface-variant leading-none mt-space-xs uppercase tracking-wider">Gestión Ganadera</span></div></div><nav class="hidden xl:flex items-center gap-space-xs" data-active-classes="bg-primary-container text-on-primary font-label-md rounded-lg"><a class="px-space-sm py-space-xs rounded-lg font-label-md text-label-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="inicio" href="#">Inicio</a><a aria-current="page" class="px-space-sm py-space-xs transition-colors bg-primary-container text-on-primary font-label-md rounded-lg" data-path="animales" href="#">Animales</a><a class="px-space-sm py-space-xs rounded-lg font-label-md text-label-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="potreros" href="#">Potreros</a><a class="px-space-sm py-space-xs rounded-lg font-label-md text-label-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="lotes" href="#">Lotes</a><a class="px-space-sm py-space-xs rounded-lg font-label-md text-label-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="movimientos" href="#">Movimientos</a><a class="px-space-sm py-space-xs rounded-lg font-label-md text-label-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="usuarios" href="#">Usuarios</a><a class="px-space-sm py-space-xs rounded-lg font-label-md text-label-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="establecimiento" href="#">Establecimiento</a><a class="px-space-sm py-space-xs rounded-lg font-label-md text-label-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="configuracion" href="#">Configuración</a></nav></div><div class="flex items-center gap-space-md"><div class="hidden md:flex items-center gap-space-xs px-space-sm py-space-xs rounded-lg bg-surface-container-low text-secondary"><span class="material-symbols-outlined text-[18px]">cloud_done</span><span class="font-label-sm text-label-sm tracking-wide">Modo Local / Sincronizado</span></div><div class="flex items-center gap-space-sm pl-space-sm bg-surface-container-high/40 rounded-lg p-space-xs"><div class="flex flex-col text-right hidden sm:flex"><span class="font-label-md text-label-md text-primary leading-tight">Don Juan Pérez</span><span class="font-label-sm text-label-sm text-on-surface-variant leading-tight">Dueño / Encargado</span></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></div></header><main class="w-full pt-16 bg-surface"><div class="flex flex-col w-full">
+<div class="w-full px-margin py-space-md flex flex-col gap-space-lg max-w-7xl mx-auto">
+<!-- Barra Superior de Navegación y Contexto Rural -->
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-space-md bg-surface-container-lowest p-space-md rounded-xl shadow-sm">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center gap-space-xs text-on-surface-variant font-body-sm text-body-sm">
+<span class="hover:text-primary transition-colors cursor-pointer">Potreros</span>
+<span class="material-symbols-outlined text-[16px] text-outline">chevron_right</span>
+<span class="font-label-md text-label-md text-primary">Ficha de Potrero y Recursos de Campo</span>
+</div>
+<div class="flex flex-wrap items-center gap-space-sm pt-space-xs">
+<span class="px-space-sm py-space-xs rounded-lg bg-primary-container text-on-primary font-label-sm text-label-sm tracking-wider uppercase">
+            POTRERO ACTIVO: P-04
+          </span>
+<h1 class="font-headline-md text-headline-md text-primary tracking-tight">
+            “El Bajadón de Alfalfa”
+          </h1>
+<div class="flex items-center gap-space-xs px-space-sm py-space-xs rounded-lg bg-secondary-container text-on-secondary-fixed-variant">
+<span class="material-symbols-outlined text-[18px]">crop_square</span>
+<span class="font-label-md text-label-md">120 Hectáreas</span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-space-sm shrink-0">
+<button class="flex items-center gap-space-xs px-space-md py-space-sm rounded-lg bg-surface-container hover:bg-surface-container-high text-primary font-label-lg text-label-lg transition-colors shadow-sm" type="button">
+<span class="material-symbols-outlined text-[20px]">arrow_back</span>
+<span>Volver al Listado de Potreros</span>
+</button>
+</div>
+</div>
+<!-- Layout Asimétrico de Dos Columnas Operativas -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-start">
+<!-- Columna Izquierda: Formulario y Especificaciones Agronómicas (7 cols) -->
+<div class="lg:col-span-7 flex flex-col gap-space-lg">
+<!-- Tarjeta de Imagen de Terreno y Ficha Técnica -->
+<div class="relative w-full h-44 rounded-xl overflow-hidden shadow-sm bg-surface-container-high">
+<div class="w-full h-full bg-cover bg-center" data-alt="Expansive lush green pasture with cattle grazing in the distance under a vast Argentine Pampas sky. Agricultural landscape with deep pasture green, fence lines, and clean morning lighting, rural farming realism." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuA0gEc7dqxpMDMue8dKZMS3WW7x6n4xsdhNuridPjDGU7aksEDPez4goWJMSvYkZgoD5Q0bqP8N1bILwkH9is7f6ySw6B53QU9Xb5YmQBX5bk53F7Bv9r47awMQYiNf2SS1YyIPaK6IdleM6WgcWspB-sqdlO22ZqHgiilYZmShhXdHp10mBJDMqwitP5fVw1OV0OOi5lUCJ1dkHo1L4rniE7F-zWU1__RB_KxLae5-2eVLKwON6lHh')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/80 via-primary/30 to-transparent flex items-end p-space-md">
+<div class="flex items-center justify-between w-full text-on-primary">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-[26px]">grid_goldenratio</span>
+<div>
+<div class="font-label-sm text-label-sm uppercase tracking-wider text-primary-fixed">Sector Agroecológico</div>
+<div class="font-title-md text-title-md">Zona Baja • Cuenca de Infiltración Directa</div>
+</div>
+</div>
+<span class="px-space-sm py-space-xs rounded-lg bg-surface-container-lowest/90 backdrop-blur-md text-primary font-label-sm text-label-sm shadow-sm">
+                Cartografía v2.4
+              </span>
+</div>
+</div>
+</div>
+<form class="flex flex-col gap-space-lg bg-surface-container-lowest p-space-lg rounded-xl shadow-sm" onsubmit="event.preventDefault();">
+<div class="flex items-center justify-between pb-space-sm">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-[22px]">fence</span>
+<h2 class="font-headline-sm text-headline-sm text-primary">Datos Principales del Potrero</h2>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Registro Oficial Establecimiento</span>
+</div>
+<!-- Códigos y Nomenclatura -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-md">
+<div class="flex flex-col gap-space-xs">
+<label class="font-label-md text-label-md text-primary" for="codigo_potrero">Código / Número</label>
+<input class="h-11 px-space-sm rounded-lg bg-surface-container-low text-on-surface font-title-md text-title-md outline-none focus:bg-surface-container-lowest transition-all" id="codigo_potrero" type="text" value="P-04"/>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Marca en alambre y mapa</span>
+</div>
+<div class="md:col-span-2 flex flex-col gap-space-xs">
+<label class="font-label-md text-label-md text-primary" for="nombre_criollo">Nombre Criollo / Apodo de Manga</label>
+<input class="h-11 px-space-sm rounded-lg bg-surface-container-low text-on-surface font-body-lg text-body-lg outline-none focus:bg-surface-container-lowest transition-all" id="nombre_criollo" type="text" value="El Bajadón de Alfalfa"/>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Denominación usual peonada</span>
+</div>
+</div>
+<!-- Dimensiones Geométricas -->
+<div class="p-space-md rounded-xl bg-surface-container-low flex flex-col gap-space-sm">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Dimensiones de Mensura Rural</span>
+<div class="grid grid-cols-3 gap-space-md">
+<div class="flex flex-col">
+<span class="font-body-sm text-body-sm text-on-surface-variant">Superficie Total</span>
+<span class="font-headline-sm text-headline-sm text-primary">120 Ha</span>
+</div>
+<div class="flex flex-col">
+<span class="font-body-sm text-body-sm text-on-surface-variant">Largo Perimetral</span>
+<span class="font-title-md text-title-md text-primary">1.200 m</span>
+</div>
+<div class="flex flex-col">
+<span class="font-body-sm text-body-sm text-on-surface-variant">Ancho Frontal</span>
+<span class="font-title-md text-title-md text-primary">1.000 m</span>
+</div>
+</div>
+</div>
+<!-- Tipo de Pastura -->
+<div class="flex flex-col gap-space-xs">
+<label class="font-label-md text-label-md text-primary" for="pastura_cobertura">Tipo de Pastura / Cobertura Forrajera</label>
+<div class="relative flex items-center">
+<span class="material-symbols-outlined absolute left-3 text-secondary text-[20px]">grass</span>
+<input class="w-full h-11 pl-10 pr-space-sm rounded-lg bg-surface-container-low text-on-surface font-body-md text-body-md outline-none focus:bg-surface-container-lowest transition-all" id="pastura_cobertura" type="text" value="Alfalfa consociada con Festuca y Trébol Blanco"/>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Implantación Año 2023 • Alta palatabilidad</span>
+</div>
+<!-- Estado del Potrero (Selector Táctil Rústico) -->
+<div class="flex flex-col gap-space-xs">
+<label class="font-label-md text-label-md text-primary">Estado Operativo Actual</label>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-sm">
+<!-- Opción 1: En Pastoreo (Marcado) -->
+<label class="cursor-pointer flex items-center gap-space-sm p-space-sm rounded-lg bg-primary text-on-primary shadow-sm">
+<input checked="" class="accent-secondary-fixed w-5 h-5 cursor-pointer" name="estado_potrero" type="radio" value="pastoreo"/>
+<div class="flex flex-col leading-tight">
+<span class="font-label-md text-label-md">En Pastoreo</span>
+<span class="font-body-sm text-body-sm text-primary-fixed-dim">Activo / Con Hacienda</span>
+</div>
+</label>
+<!-- Opción 2: Descanso -->
+<label class="cursor-pointer flex items-center gap-space-sm p-space-sm rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface transition-colors">
+<input class="accent-primary w-5 h-5 cursor-pointer" name="estado_potrero" type="radio" value="descanso"/>
+<div class="flex flex-col leading-tight">
+<span class="font-label-md text-label-md text-primary">Descanso / Clausura</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">En Rebrote</span>
+</div>
+</label>
+<!-- Opción 3: Labranza -->
+<label class="cursor-pointer flex items-center gap-space-sm p-space-sm rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface transition-colors">
+<input class="accent-primary w-5 h-5 cursor-pointer" name="estado_potrero" type="radio" value="siembra"/>
+<div class="flex flex-col leading-tight">
+<span class="font-label-md text-label-md text-primary">Siembra / Labranza</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Preparación</span>
+</div>
+</label>
+</div>
+</div>
+<!-- Observaciones Prácticas del Potrero -->
+<div class="flex flex-col gap-space-xs">
+<label class="font-label-md text-label-md text-primary" for="observaciones">Descripción y Observaciones Prácticas de Manejo</label>
+<textarea class="w-full p-space-sm rounded-lg bg-surface-container-low text-on-surface font-body-md text-body-md outline-none focus:bg-surface-container-lowest transition-all" id="observaciones" rows="4">Alambrado perimetral 7 hilos nuevo en sector sur. Buen drenaje en época de lluvia torrencial. Aguada de excelente calidad con flujo ininterrumpido desde el molino central.</textarea>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Notas directas para capataces y personal de ronda</span>
+</div>
+<!-- Acciones de Guardado -->
+<div class="flex flex-col sm:flex-row items-center justify-between gap-space-md pt-space-sm">
+<button class="w-full sm:w-auto px-space-md py-space-sm rounded-lg bg-surface-container hover:bg-surface-container-high text-primary font-label-md text-label-md transition-colors text-center" type="button">
+              Cancelar / Restablecer
+            </button>
+<button class="w-full sm:w-auto px-space-lg py-space-md rounded-lg bg-primary-container hover:bg-primary text-on-primary font-label-lg text-label-lg transition-colors flex items-center justify-center gap-space-sm shadow-md" type="button">
+<span class="material-symbols-outlined text-[20px]">save</span>
+<span>Guardar Cambios del Potrero</span>
+</button>
+</div>
+</form>
+</div>
+<!-- Columna Derecha: Carga Animal & Recursos de Infraestructura (5 cols) -->
+<div class="lg:col-span-5 flex flex-col gap-space-lg">
+<!-- Métricas Rápidas de Ocupación Ganadera -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-[20px]">pets</span>
+<h3 class="font-label-lg text-label-lg text-primary uppercase tracking-wider">Carga Ganadera en Lote</h3>
+</div>
+<span class="px-space-xs py-0.5 rounded bg-surface-container-low text-secondary font-label-sm text-label-sm">
+              Lote N-12 Activo
+            </span>
+</div>
+<div class="grid grid-cols-3 gap-space-sm">
+<!-- Métrica 1 -->
+<div class="bg-surface-container-low p-space-sm rounded-lg flex flex-col">
+<span class="font-body-sm text-body-sm text-on-surface-variant leading-none mb-space-xs">Hacienda</span>
+<span class="font-headline-sm text-headline-sm text-primary">142</span>
+<span class="font-label-sm text-label-sm text-secondary truncate">Nov. invernada</span>
+</div>
+<!-- Métrica 2 -->
+<div class="bg-surface-container-low p-space-sm rounded-lg flex flex-col">
+<span class="font-body-sm text-body-sm text-on-surface-variant leading-none mb-space-xs">Densidad</span>
+<span class="font-headline-sm text-headline-sm text-primary">1.18</span>
+<span class="font-label-sm text-label-sm text-secondary truncate">Cabezas / Ha</span>
+</div>
+<!-- Métrica 3 -->
+<div class="bg-surface-container-low p-space-sm rounded-lg flex flex-col">
+<span class="font-body-sm text-body-sm text-on-surface-variant leading-none mb-space-xs">Permanencia</span>
+<span class="font-headline-sm text-headline-sm text-primary">18 d</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant truncate">Rotar en 12 d</span>
+</div>
+</div>
+<!-- Medidor visual de carga -->
+<div class="flex flex-col gap-space-xs pt-space-xs">
+<div class="flex items-center justify-between font-label-sm text-label-sm">
+<span class="text-on-surface-variant">Capacidad Óptima de Carga</span>
+<span class="text-secondary font-label-md text-label-md">74% de Carga Máxima</span>
+</div>
+<div class="w-full h-2.5 rounded-full bg-surface-container overflow-hidden flex">
+<div class="h-full bg-secondary transition-all rounded-full" style="width: 74%;"></div>
+</div>
+</div>
+</div>
+<!-- Recursos e Instalaciones del Potrero -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex flex-col">
+<h3 class="font-title-md text-title-md text-primary">Recursos e Infraestructura</h3>
+<span class="font-body-sm text-body-sm text-on-surface-variant">4 Instalaciones vinculadas al P-04</span>
+</div>
+<button class="flex items-center gap-space-xs px-space-sm py-space-xs rounded-lg bg-surface-container hover:bg-surface-container-high text-primary font-label-sm text-label-sm transition-colors" type="button">
+<span class="material-symbols-outlined text-[16px]">add</span>
+<span>Asignar Recurso</span>
+</button>
+</div>
+<div class="flex flex-col gap-space-sm">
+<!-- Recurso 1: Bebedero Central -->
+<div class="p-space-sm rounded-xl bg-surface-container-low flex flex-col gap-space-xs">
+<div class="flex items-start justify-between gap-space-xs">
+<div class="flex items-start gap-space-sm">
+<div class="w-8 h-8 rounded-lg bg-surface-container flex items-center justify-center shrink-0 text-primary">
+<span class="material-symbols-outlined text-[20px]">water_drop</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-primary">Bebedero Central Circular (5.000 L)</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Cemento encofrado con piso de piedra</span>
+</div>
+</div>
+<span class="shrink-0 px-space-xs py-0.5 rounded bg-secondary-container text-on-secondary-fixed-variant font-label-sm text-label-sm uppercase">
+                  Disponible
+                </span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface pl-10">
+                Boya funcionando normal, nivel lleno continuo sin pérdidas.
+              </p>
+<div class="flex items-center justify-between pt-space-xs pl-10 font-body-sm text-body-sm">
+<span class="text-on-surface-variant font-label-sm text-label-sm">Inspeccionado: Ayer</span>
+<div class="flex items-center gap-space-sm">
+<button class="text-primary font-label-sm text-label-sm hover:underline" type="button">Modificar</button>
+<span class="text-outline-variant">•</span>
+<button class="text-secondary font-label-sm text-label-sm hover:underline" type="button">Alternar Estado</button>
+</div>
+</div>
+</div>
+<!-- Recurso 2: Molino de Viento -->
+<div class="p-space-sm rounded-xl bg-surface-container-low flex flex-col gap-space-xs">
+<div class="flex items-start justify-between gap-space-xs">
+<div class="flex items-start gap-space-sm">
+<div class="w-8 h-8 rounded-lg bg-surface-container flex items-center justify-center shrink-0 text-primary">
+<span class="material-symbols-outlined text-[20px]">air</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-primary">Molino Sur Aermotor 10 Pies</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Conectado a Tanque Australiano 100k L</span>
+</div>
+</div>
+<span class="shrink-0 px-space-xs py-0.5 rounded bg-secondary-container text-on-secondary-fixed-variant font-label-sm text-label-sm uppercase">
+                  Disponible
+                </span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface pl-10">
+                Molino destrabado con excelente caudal. Varillas lubricadas semana pasada.
+              </p>
+<div class="flex items-center justify-between pt-space-xs pl-10 font-body-sm text-body-sm">
+<span class="text-on-surface-variant font-label-sm text-label-sm">Inspeccionado: 3 días</span>
+<div class="flex items-center gap-space-sm">
+<button class="text-primary font-label-sm text-label-sm hover:underline" type="button">Modificar</button>
+<span class="text-outline-variant">•</span>
+<button class="text-secondary font-label-sm text-label-sm hover:underline" type="button">Alternar Estado</button>
+</div>
+</div>
+</div>
+<!-- Recurso 3: Comederos de Lona -->
+<div class="p-space-sm rounded-xl bg-surface-container-low flex flex-col gap-space-xs">
+<div class="flex items-start justify-between gap-space-xs">
+<div class="flex items-start gap-space-sm">
+<div class="w-8 h-8 rounded-lg bg-surface-container flex items-center justify-center shrink-0 text-primary">
+<span class="material-symbols-outlined text-[20px]">nutrition</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-primary">Comederos de Lona Móviles (x4 módulos)</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Estructura caño galvanizado 5m c/u</span>
+</div>
+</div>
+<span class="shrink-0 px-space-xs py-0.5 rounded bg-secondary-container text-on-secondary-fixed-variant font-label-sm text-label-sm uppercase">
+                  Disponible
+                </span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface pl-10">
+                Limpios y secos, aptos suplementación con maíz molido o sales minerales.
+              </p>
+<div class="flex items-center justify-between pt-space-xs pl-10 font-body-sm text-body-sm">
+<span class="text-on-surface-variant font-label-sm text-label-sm">Inspeccionado: Hoy 08:00</span>
+<div class="flex items-center gap-space-sm">
+<button class="text-primary font-label-sm text-label-sm hover:underline" type="button">Modificar</button>
+<span class="text-outline-variant">•</span>
+<button class="text-secondary font-label-sm text-label-sm hover:underline" type="button">Alternar Estado</button>
+</div>
+</div>
+</div>
+<!-- Recurso 4: Manga y Tranquera (En Reparación) -->
+<div class="p-space-sm rounded-xl bg-surface-container-high flex flex-col gap-space-xs">
+<div class="flex items-start justify-between gap-space-xs">
+<div class="flex items-start gap-space-sm">
+<div class="w-8 h-8 rounded-lg bg-surface-container flex items-center justify-center shrink-0 text-tertiary-container">
+<span class="material-symbols-outlined text-[20px]">handyman</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-primary">Tranquera y Manga a Calle Central</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Conexión principal a callejón de arreo</span>
+</div>
+</div>
+<span class="shrink-0 px-space-xs py-0.5 rounded bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm uppercase">
+                  En Reparación
+                </span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface pl-10">
+                Alambre suelto en poste esquinero derecho; habilitado solo con precaución al paso.
+              </p>
+<div class="flex items-center justify-between pt-space-xs pl-10 font-body-sm text-body-sm">
+<span class="text-on-surface-variant font-label-sm text-label-sm">Avisado al alambrador</span>
+<div class="flex items-center gap-space-sm">
+<button class="text-primary font-label-sm text-label-sm hover:underline" type="button">Modificar</button>
+<span class="text-outline-variant">•</span>
+<button class="text-on-tertiary-container font-label-sm text-label-sm hover:underline" type="button">Marcar Listo</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Módulo de Registro Rápido de Novedades de Campo -->
+<div class="p-space-md rounded-xl bg-surface-container-lowest shadow-sm flex flex-col gap-space-xs">
+<div class="flex items-center gap-space-xs text-primary font-label-md text-label-md">
+<span class="material-symbols-outlined text-[18px]">history_edu</span>
+<span>Historial Inmediato de Movimientos en P-04</span>
+</div>
+<div class="flex flex-col gap-space-xs pt-space-xs text-on-surface-variant font-body-sm text-body-sm">
+<div class="flex items-center justify-between">
+<span>• Ingreso lote novillos (142 cabezas)</span>
+<span class="font-label-sm text-label-sm">Hace 18 días</span>
+</div>
+<div class="flex items-center justify-between">
+<span>• Desmalezado mecánico sector este</span>
+<span class="font-label-sm text-label-sm">Hace 26 días</span>
+</div>
+<div class="flex items-center justify-between">
+<span>• Fertilización fosforada base</span>
+<span class="font-label-sm text-label-sm">04 Nov 2023</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Pie de Seguridad Rural y Operación Autónoma (100% Autónomo) -->
+<div class="w-full bg-surface-container-low p-space-md rounded-xl flex flex-col md:flex-row items-center justify-between gap-space-sm text-secondary">
+<div class="flex items-center gap-space-sm text-left">
+<div class="w-8 h-8 rounded-lg bg-surface-container-lowest flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-secondary text-[22px]">offline_pin</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-primary">
+            Modo de Campo Activo • Sincronización Automática en Memoria Local
+          </span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">
+            No requiere conexión a internet para registrar cambios. Los datos quedan resguardados en el dispositivo del establecimiento.
+          </span>
+</div>
+</div>
+<div class="flex items-center gap-space-xs text-primary font-label-sm text-label-sm shrink-0">
+<span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span>
+<span>Base de Datos Rural Lista</span>
+</div>
+</div>
+</div>
+</div></main><footer class="w-full bg-surface-container-low py-space-lg"><div class="w-full px-margin flex flex-col sm:flex-row items-center justify-between gap-space-sm font-body-sm text-body-sm text-on-surface-variant"><div class="flex items-center gap-space-xs"><span class="font-label-sm text-label-sm text-primary">SIGGAF</span><span>•</span><span>Sistema Inteligente de Gestión Ganadera Argentina</span></div><div><span>Operación Continua • Servidor de Campo</span></div></div></footer></body></html>

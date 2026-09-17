@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+
+<html lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>SIGGAF - Guía de Uso Fácil de Campo</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "on-primary-fixed": "#042013",
+            "outline-variant": "#c2c8c2",
+            "error": "#ba1a1a",
+            "on-tertiary-container": "#bb9861",
+            "surface-variant": "#d7e6da",
+            "secondary-fixed-dim": "#87da83",
+            "on-error-container": "#93000a",
+            "error-container": "#ffdad6",
+            "on-error": "#ffffff",
+            "on-surface": "#121e17",
+            "inverse-on-surface": "#e6f5e8",
+            "tertiary": "#2d1c00",
+            "secondary-fixed": "#a2f79c",
+            "on-tertiary-fixed": "#281900",
+            "surface-dim": "#cfded2",
+            "surface-tint": "#486554",
+            "on-background": "#121e17",
+            "outline": "#727973",
+            "on-primary": "#ffffff",
+            "surface-container": "#e3f2e5",
+            "surface-container-highest": "#d7e6da",
+            "surface-container-high": "#ddece0",
+            "tertiary-fixed-dim": "#e7c187",
+            "on-secondary-fixed": "#002204",
+            "primary-container": "#1e3a2b",
+            "surface-bright": "#eefdf1",
+            "primary-fixed-dim": "#aeceb9",
+            "tertiary-container": "#483003",
+            "primary": "#072417",
+            "secondary": "#196d24",
+            "tertiary-fixed": "#ffdeae",
+            "surface": "#eefdf1",
+            "on-tertiary": "#ffffff",
+            "surface-container-low": "#e8f7eb",
+            "secondary-container": "#a2f79c",
+            "background": "#eefdf1",
+            "on-primary-fixed-variant": "#304d3d",
+            "on-secondary-container": "#21732a",
+            "inverse-surface": "#26332b",
+            "on-secondary-fixed-variant": "#005313",
+            "inverse-primary": "#aeceb9",
+            "on-surface-variant": "#424843",
+            "on-secondary": "#ffffff",
+            "on-primary-container": "#85a490",
+            "on-tertiary-fixed-variant": "#5c4214",
+            "surface-container-lowest": "#ffffff",
+            "primary-fixed": "#caead4"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.125rem",
+            "lg": "0.25rem",
+            "xl": "0.5rem",
+            "full": "0.75rem"
+          },
+          "fontFamily": {
+            "title-md": ["Plus Jakarta Sans"],
+            "headline-lg": ["Plus Jakarta Sans"],
+            "body-sm": ["Plus Jakarta Sans"],
+            "label-lg": ["Plus Jakarta Sans"],
+            "body-md": ["Plus Jakarta Sans"],
+            "headline-md": ["Plus Jakarta Sans"],
+            "label-md": ["Plus Jakarta Sans"],
+            "headline-sm": ["Plus Jakarta Sans"],
+            "headline-lg-mobile": ["Plus Jakarta Sans"],
+            "label-sm": ["Plus Jakarta Sans"],
+            "body-lg": ["Plus Jakarta Sans"]
+          }
+        },
+      },
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+  </style>
+</head>
+<body class="bg-background text-on-surface antialiased min-h-screen font-body-md selection:bg-secondary-fixed selection:text-on-secondary-fixed">
+<!-- Header Superior Oficial SIGGAF -->
+<header class="bg-surface-container-lowest border-b border-outline-variant/40 sticky top-0 z-30 shadow-sm">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-18 py-3 flex items-center justify-between gap-4">
+<div class="flex items-center gap-3.5">
+<div class="w-10 h-10 rounded-lg bg-primary-container flex items-center justify-center text-on-primary shadow-sm">
+<svg class="w-6 h-6 fill-current" viewbox="0 0 48 48">
+<path d="M24 4C25.7818 14.2173 33.7827 22.2182 44 24C33.7827 25.7818 25.7818 33.7827 24 44C22.2182 33.7827 14.2173 25.7818 4 24C14.2173 22.2182 22.2182 14.2173 24 4Z"></path>
+</svg>
+</div>
+<div>
+<span class="text-xl font-black tracking-tight text-primary flex items-center gap-2">
+            SIGGAF
+            <span class="text-xs uppercase px-2 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-bold tracking-wider">Campo</span>
+</span>
+<p class="text-xs text-on-surface-variant font-medium">Establecimiento El Ombú</p>
+</div>
+</div>
+<!-- Menú Superior Destinos -->
+<nav class="hidden md:flex items-center gap-2 lg:gap-3">
+<a class="px-3.5 py-2 rounded-lg text-sm font-semibold text-on-surface hover:bg-surface-container transition-colors flex items-center gap-1.5" href="#">
+<span class="material-symbols-outlined text-[18px]">home</span>
+          Inicio
+        </a>
+<a class="px-3.5 py-2 rounded-lg text-sm font-semibold text-on-surface hover:bg-surface-container transition-colors flex items-center gap-1.5" href="#">
+<span class="material-symbols-outlined text-[18px]">agriculture</span>
+          Hacienda
+        </a>
+<a class="px-3.5 py-2 rounded-lg text-sm font-semibold text-on-surface hover:bg-surface-container transition-colors flex items-center gap-1.5" href="#">
+<span class="material-symbols-outlined text-[18px]">fence</span>
+          Lotes y Potreros
+        </a>
+<a class="px-3.5 py-2 rounded-lg text-sm font-bold bg-primary-fixed text-on-primary-fixed border border-primary-fixed-dim/60 flex items-center gap-1.5" href="#">
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">menu_book</span>
+          Guía Fácil
+        </a>
+</nav>
+<!-- Botón Modo Práctica Header -->
+<div class="flex items-center gap-3">
+<button class="bg-secondary text-on-secondary hover:bg-secondary/90 transition-all font-bold text-sm px-4 py-2.5 rounded-xl shadow-sm flex items-center gap-2 active:scale-95">
+<span class="material-symbols-outlined text-xl" style="font-variation-settings: 'FILL' 1;">smart_display</span>
+<span class="hidden sm:inline">Modo Práctica</span>
+</button>
+<div class="h-10 w-10 rounded-full ring-2 ring-primary/20 overflow-hidden bg-surface-container-high flex items-center justify-center">
+<img alt="Gaucho y encargado de campo" class="w-full h-full object-cover" data-alt="Close up portrait photograph of an authentic Argentine gaucho and ranch manager with a weathered face, wearing a traditional dark beret and neckerchief under soft natural field light with the serene green pampa background in a clean earthy tone palette." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDohsvg-ZVi8FfVfQTndIKIJZG-PkV-5PBu8KmkZrKR7BN_IH2IxXm6STjuZ7Tf-RKRIIj4nTewyMwF9STS3QYRGLzlxdFBeQRuqsTNB5Y_HXSETa8EUIc3mT2u3vAKIbbmC6yCakzMd5TrVczpgmYm2M7UorDitKEmWkT09iIM6APOa961p3bp-UuArn4c-3sPhazjOEssB3jZ8-8Qlx1u7V5rfhZj3W53nwXO4_JU_Y_3rdhAYncW"/>
+</div>
+</div>
+</div>
+</header>
+<!-- Contenido Principal -->
+<main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-10">
+<!-- 1. Encabezado Amigable y Tranquilizador -->
+<section class="bg-surface-container-lowest border-2 border-primary-fixed-dim/80 rounded-2xl p-6 sm:p-8 lg:p-10 shadow-sm relative overflow-hidden">
+<div class="absolute -right-10 -bottom-10 opacity-10 pointer-events-none text-primary">
+<span class="material-symbols-outlined text-[240px]">menu_book</span>
+</div>
+<div class="relative z-10 max-w-3xl space-y-4">
+<div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-secondary-fixed/50 text-on-secondary-fixed text-xs sm:text-sm font-bold border border-secondary-fixed">
+<span class="material-symbols-outlined text-base">verified_user</span>
+          Sin tecnicismos • Sin miedo a equivocarse
+        </div>
+<h1 class="text-3xl sm:text-4xl lg:text-5xl font-black text-primary tracking-tight leading-tight">
+          Guía de Uso Fácil de SIGGAF
+        </h1>
+<p class="text-lg sm:text-xl text-on-surface-variant leading-relaxed">
+          Cómo usar el sistema en el campo paso a paso, sin vueltas ni complicaciones. Pensado para trabajar en la manga, en el galpón o a caballo.
+        </p>
+<div class="pt-3 flex flex-wrap items-center gap-4">
+<button class="bg-primary hover:bg-primary/90 text-on-primary text-base sm:text-lg font-bold px-7 py-4 rounded-xl shadow-md flex items-center gap-3 transition-transform active:scale-95 group">
+<span class="material-symbols-outlined text-2xl text-secondary-fixed group-hover:scale-110 transition-transform" style="font-variation-settings: 'FILL' 1;">play_circle</span>
+            Probar sin miedo (Modo Práctica)
+          </button>
+<div class="text-sm font-semibold text-secondary flex items-center gap-1.5 py-2">
+<span class="material-symbols-outlined text-lg">check_circle</span>
+            No borra datos reales ni afecta hacienda
+          </div>
+</div>
+</div>
+</section>
+<!-- 2. Las 4 Tareas Principales de Campo -->
+<section class="space-y-6">
+<div class="flex items-end justify-between border-b-2 border-outline-variant/50 pb-3">
+<div>
+<span class="text-xs font-bold tracking-widest uppercase text-secondary">Fichas Didácticas</span>
+<h2 class="text-2xl sm:text-3xl font-black text-primary tracking-tight">
+            Las 4 Tareas Principales de Campo
+          </h2>
+</div>
+<span class="hidden sm:block text-sm font-medium text-on-surface-variant">
+          Paso a paso directo y en criollo
+        </span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<!-- Tarjeta 1: Cargar Animal en la Manga -->
+<article class="bg-surface-container-lowest border-2 border-outline-variant/70 hover:border-secondary transition-all rounded-2xl p-6 sm:p-7 shadow-sm flex flex-col justify-between">
+<div class="space-y-4">
+<div class="flex items-center gap-4">
+<div class="w-14 h-14 rounded-xl bg-surface-container flex items-center justify-center text-primary-container shrink-0 border border-outline-variant/60">
+<span class="material-symbols-outlined text-3xl" style="font-variation-settings: 'FILL' 1;">sell</span>
+</div>
+<div>
+<span class="text-xs font-bold uppercase tracking-wider text-secondary">Paso a paso 1</span>
+<h3 class="text-xl sm:text-2xl font-black text-primary">1. Cargar un Animal en la Manga</h3>
+</div>
+</div>
+<!-- Pasos numerados grandes -->
+<div class="bg-surface-container-low rounded-xl p-4 border border-outline-variant/40 space-y-3">
+<div class="flex items-start gap-3">
+<span class="w-7 h-7 rounded-full bg-primary text-on-primary flex items-center justify-center font-bold text-sm shrink-0 mt-0.5">1°</span>
+<p class="text-base text-on-surface leading-snug">Vas a <strong>Animales</strong> y tocás <strong>Nuevo Animal</strong>.</p>
+</div>
+<div class="flex items-start gap-3">
+<span class="w-7 h-7 rounded-full bg-primary text-on-primary flex items-center justify-center font-bold text-sm shrink-0 mt-0.5">2°</span>
+<p class="text-base text-on-surface leading-snug">Anotás el número de la <strong>caravana de la oreja</strong> y el peso que canta la balanza.</p>
+</div>
+<div class="flex items-start gap-3">
+<span class="w-7 h-7 rounded-full bg-secondary text-on-secondary flex items-center justify-center font-bold text-sm shrink-0 mt-0.5">3°</span>
+<p class="text-base text-on-surface leading-snug">Tocás el botón verde <strong>Guardar</strong>.</p>
+</div>
+</div>
+<!-- Consejo Gaucho -->
+<div class="bg-surface-bright rounded-xl p-3.5 border-l-4 border-tertiary-fixed-dim border-y border-r border-outline-variant/40 flex items-start gap-3">
+<span class="material-symbols-outlined text-on-tertiary-container text-xl mt-0.5" style="font-variation-settings: 'FILL' 1;">tips_and_updates</span>
+<p class="text-sm text-on-surface-variant font-medium">
+<span class="font-bold text-on-surface">Consejo gaucho:</span> Si no sabés la fecha exacta de nacimiento, no te preocupes, poné el año aproximado.
+              </p>
+</div>
+</div>
+<div class="mt-6 pt-4 border-t border-outline-variant/30 flex items-center justify-between">
+<span class="text-xs font-semibold text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-sm text-secondary">timer</span> Demora: 30 segundos
+            </span>
+<button class="px-4 py-2 bg-surface-container hover:bg-surface-container-high text-primary font-bold text-sm rounded-lg transition-colors flex items-center gap-1.5">
+<span>Probar cargar animal</span>
+<span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+</div>
+</article>
+<!-- Tarjeta 2: Mover Hacienda de Potrero -->
+<article class="bg-surface-container-lowest border-2 border-outline-variant/70 hover:border-secondary transition-all rounded-2xl p-6 sm:p-7 shadow-sm flex flex-col justify-between">
+<div class="space-y-4">
+<div class="flex items-center gap-4">
+<div class="w-14 h-14 rounded-xl bg-surface-container flex items-center justify-center text-primary-container shrink-0 border border-outline-variant/60">
+<span class="material-symbols-outlined text-3xl" style="font-variation-settings: 'FILL' 1;">fence</span>
+</div>
+<div>
+<span class="text-xs font-bold uppercase tracking-wider text-secondary">Paso a paso 2</span>
+<h3 class="text-xl sm:text-2xl font-black text-primary">2. Mover la Hacienda de Potrero</h3>
+</div>
+</div>
+<!-- Pasos numerados -->
+<div class="bg-surface-container-low rounded-xl p-4 border border-outline-variant/40 space-y-3">
+<div class="flex items-start gap-3">
+<span class="w-7 h-7 rounded-full bg-primary text-on-primary flex items-center justify-center font-bold text-sm shrink-0 mt-0.5">1°</span>
+<p class="text-base text-on-surface leading-snug">Entrás a <strong>Lotes y Movimientos</strong> en la pantalla.</p>
+</div>
+<div class="flex items-start gap-3">
+<span class="w-7 h-7 rounded-full bg-primary text-on-primary flex items-center justify-center font-bold text-sm shrink-0 mt-0.5">2°</span>
+<p class="text-base text-on-surface leading-snug">Elegís qué <strong>lote o tropa</strong> estás arreando.</p>
+</div>
+<div class="flex items-start gap-3">
+<span class="w-7 h-7 rounded-full bg-secondary text-on-secondary flex items-center justify-center font-bold text-sm shrink-0 mt-0.5">3°</span>
+<p class="text-base text-on-surface leading-snug">Marcás a qué <strong>potrero entra</strong> y tocás <strong>Registrar</strong>.</p>
+</div>
+</div>
+<!-- Consejo Gaucho -->
+<div class="bg-surface-bright rounded-xl p-3.5 border-l-4 border-tertiary-fixed-dim border-y border-r border-outline-variant/40 flex items-start gap-3">
+<span class="material-symbols-outlined text-on-tertiary-container text-xl mt-0.5" style="font-variation-settings: 'FILL' 1;">tips_and_updates</span>
+<p class="text-sm text-on-surface-variant font-medium">
+<span class="font-bold text-on-surface">Consejo gaucho:</span> Queda anotado el día y la hora automáticamente, así sabés cuándo le toca descansar al pasto.
+              </p>
+</div>
+</div>
+<div class="mt-6 pt-4 border-t border-outline-variant/30 flex items-center justify-between">
+<span class="text-xs font-semibold text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-sm text-secondary">check</span> Queda listo en el mapa
+            </span>
+<button class="px-4 py-2 bg-surface-container hover:bg-surface-container-high text-primary font-bold text-sm rounded-lg transition-colors flex items-center gap-1.5">
+<span>Probar mover lote</span>
+<span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+</div>
+</article>
+<!-- Tarjeta 3: Anotar un Pesaje -->
+<article class="bg-surface-container-lowest border-2 border-outline-variant/70 hover:border-secondary transition-all rounded-2xl p-6 sm:p-7 shadow-sm flex flex-col justify-between">
+<div class="space-y-4">
+<div class="flex items-center gap-4">
+<div class="w-14 h-14 rounded-xl bg-surface-container flex items-center justify-center text-primary-container shrink-0 border border-outline-variant/60">
+<span class="material-symbols-outlined text-3xl" style="font-variation-settings: 'FILL' 1;">scale</span>
+</div>
+<div>
+<span class="text-xs font-bold uppercase tracking-wider text-secondary">Paso a paso 3</span>
+<h3 class="text-xl sm:text-2xl font-black text-primary">3. Anotar un Pesaje</h3>
+</div>
+</div>
+<!-- Pasos numerados -->
+<div class="bg-surface-container-low rounded-xl p-4 border border-outline-variant/40 space-y-3">
+<div class="flex items-start gap-3">
+<span class="w-7 h-7 rounded-full bg-primary text-on-primary flex items-center justify-center font-bold text-sm shrink-0 mt-0.5">1°</span>
+<p class="text-base text-on-surface leading-snug">Buscás el animal por su <strong>número de caravana</strong>.</p>
+</div>
+<div class="flex items-start gap-3">
+<span class="w-7 h-7 rounded-full bg-primary text-on-primary flex items-center justify-center font-bold text-sm shrink-0 mt-0.5">2°</span>
+<p class="text-base text-on-surface leading-snug">Escribís los <strong>kilos</strong> que cantó la balanza en la manga.</p>
+</div>
+<div class="flex items-start gap-3">
+<span class="w-7 h-7 rounded-full bg-secondary text-on-secondary flex items-center justify-center font-bold text-sm shrink-0 mt-0.5">3°</span>
+<p class="text-base text-on-surface leading-snug">Tocás el botón verde <strong>Guardar Pesaje</strong>.</p>
+</div>
+</div>
+<!-- Consejo Gaucho -->
+<div class="bg-surface-bright rounded-xl p-3.5 border-l-4 border-tertiary-fixed-dim border-y border-r border-outline-variant/40 flex items-start gap-3">
+<span class="material-symbols-outlined text-on-tertiary-container text-xl mt-0.5" style="font-variation-settings: 'FILL' 1;">tips_and_updates</span>
+<p class="text-sm text-on-surface-variant font-medium">
+<span class="font-bold text-on-surface">Consejo gaucho:</span> El sistema calcula solo cuántos gramos viene engordando por día.
+              </p>
+</div>
+</div>
+<div class="mt-6 pt-4 border-t border-outline-variant/30 flex items-center justify-between">
+<span class="text-xs font-semibold text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-sm text-secondary">trending_up</span> Muestra ganancia diaria
+            </span>
+<button class="px-4 py-2 bg-surface-container hover:bg-surface-container-high text-primary font-bold text-sm rounded-lg transition-colors flex items-center gap-1.5">
+<span>Probar pesar animal</span>
+<span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+</div>
+</article>
+<!-- Tarjeta 4: ¿Te equivocaste al escribir? -->
+<article class="bg-surface-container-lowest border-2 border-outline-variant/70 hover:border-secondary transition-all rounded-2xl p-6 sm:p-7 shadow-sm flex flex-col justify-between">
+<div class="space-y-4">
+<div class="flex items-center gap-4">
+<div class="w-14 h-14 rounded-xl bg-surface-container flex items-center justify-center text-primary-container shrink-0 border border-outline-variant/60">
+<span class="material-symbols-outlined text-3xl" style="font-variation-settings: 'FILL' 1;">ink_eraser</span>
+</div>
+<div>
+<span class="text-xs font-bold uppercase tracking-wider text-secondary">Tranquilidad</span>
+<h3 class="text-xl sm:text-2xl font-black text-primary">4. ¿Te equivocaste al escribir?</h3>
+</div>
+</div>
+<!-- Pasos sencillos y tranquilos -->
+<div class="bg-surface-container-low rounded-xl p-4 border border-outline-variant/40 space-y-3">
+<div class="flex items-start gap-3">
+<span class="w-7 h-7 rounded-full bg-primary-fixed text-on-primary-fixed font-bold text-sm flex items-center justify-center shrink-0 mt-0.5">!</span>
+<p class="text-base text-on-surface leading-snug">
+<strong>No pasa nada:</strong> entrás al movimiento que hiciste, tocás <strong>Anular Movimiento</strong> y escribís el motivo.
+                </p>
+</div>
+<div class="p-3 bg-surface-container rounded-lg text-sm text-on-surface italic border border-outline-variant/30">
+                Ejemplo sencillo: <span class="font-semibold text-primary">"Me equivoqué de potrero"</span> o <span class="font-semibold text-primary">"Anoté mal un número"</span>.
+              </div>
+</div>
+<!-- Consejo Gaucho -->
+<div class="bg-surface-bright rounded-xl p-3.5 border-l-4 border-tertiary-fixed-dim border-y border-r border-outline-variant/40 flex items-start gap-3">
+<span class="material-symbols-outlined text-on-tertiary-container text-xl mt-0.5" style="font-variation-settings: 'FILL' 1;">tips_and_updates</span>
+<p class="text-sm text-on-surface-variant font-medium">
+<span class="font-bold text-on-surface">Consejo gaucho:</span> Todo se puede corregir directamente desde acá, ninguna equivocación rompe el sistema.
+              </p>
+</div>
+</div>
+<div class="mt-6 pt-4 border-t border-outline-variant/30 flex items-center justify-between">
+<span class="text-xs font-semibold text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-sm text-secondary">restore</span> Siempre editable
+            </span>
+<button class="px-4 py-2 bg-surface-container hover:bg-surface-container-high text-primary font-bold text-sm rounded-lg transition-colors flex items-center gap-1.5">
+<span>Ver cómo corregir</span>
+<span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+</div>
+</article>
+</div>
+</section>
+<!-- 3. Preguntas Frecuentes del Puesto y la Manga -->
+<section class="space-y-6">
+<div class="border-b-2 border-outline-variant/50 pb-3">
+<span class="text-xs font-bold tracking-widest uppercase text-secondary">Para estar tranquilo</span>
+<h2 class="text-2xl sm:text-3xl font-black text-primary tracking-tight">
+          Preguntas Frecuentes del Puesto y la Manga
+        </h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<!-- Duda 1: Sin internet ni luz -->
+<div class="bg-surface-container-lowest border-2 border-outline-variant/70 rounded-2xl p-6 shadow-sm flex flex-col justify-between space-y-4">
+<div class="space-y-3">
+<div class="w-12 h-12 rounded-xl bg-surface-container flex items-center justify-center text-primary shrink-0">
+<span class="material-symbols-outlined text-2xl" style="font-variation-settings: 'FILL' 1;">wifi_off</span>
+</div>
+<h3 class="text-lg font-bold text-primary leading-snug">
+              ¿Qué pasa si se corta internet o la luz?
+            </h3>
+<p class="text-base text-on-surface leading-relaxed">
+              El sistema sigue funcionando igual en la computadora y en la tablet. Toda la información queda guardada acá en el campo y no se pierde nada.
+            </p>
+</div>
+<div class="pt-3 border-t border-outline-variant/30 text-xs font-bold text-secondary flex items-center gap-1.5">
+<span class="material-symbols-outlined text-sm">offline_pin</span>
+            100% Funcional sin conexión
+          </div>
+</div>
+<!-- Duda 2: Contraseña olvidada -->
+<div class="bg-surface-container-lowest border-2 border-outline-variant/70 rounded-2xl p-6 shadow-sm flex flex-col justify-between space-y-4">
+<div class="space-y-3">
+<div class="w-12 h-12 rounded-xl bg-surface-container flex items-center justify-center text-primary shrink-0">
+<span class="material-symbols-outlined text-2xl" style="font-variation-settings: 'FILL' 1;">lock_open</span>
+</div>
+<h3 class="text-lg font-bold text-primary leading-snug">
+              ¿Si me olvido la contraseña?
+            </h3>
+<p class="text-base text-on-surface leading-relaxed">
+              Respondés la pregunta criolla que elegiste (como el nombre de tu caballo) y entrás enseguida sin tener que llamar a nadie.
+            </p>
+</div>
+<div class="pt-3 border-t border-outline-variant/30 text-xs font-bold text-secondary flex items-center gap-1.5">
+<span class="material-symbols-outlined text-sm">key</span>
+            Recuperación propia inmediata
+          </div>
+</div>
+<!-- Duda 3: Permisos y Precios -->
+<div class="bg-surface-container-lowest border-2 border-outline-variant/70 rounded-2xl p-6 shadow-sm flex flex-col justify-between space-y-4">
+<div class="space-y-3">
+<div class="w-12 h-12 rounded-xl bg-surface-container flex items-center justify-center text-primary shrink-0">
+<span class="material-symbols-outlined text-2xl" style="font-variation-settings: 'FILL' 1;">shield_person</span>
+</div>
+<h3 class="text-lg font-bold text-primary leading-snug">
+              ¿Los peones pueden ver los precios o borrar hacienda?
+            </h3>
+<p class="text-base text-on-surface leading-relaxed">
+              No. El sistema cuida la información. Cada peón solo carga pesajes y movimientos del día a día, sin números de plata.
+            </p>
+</div>
+<div class="pt-3 border-t border-outline-variant/30 text-xs font-bold text-secondary flex items-center gap-1.5">
+<span class="material-symbols-outlined text-sm">security</span>
+            Seguro y claro para todos
+          </div>
+</div>
+</div>
+</section>
+<!-- 4. Banner de Respaldo y Navegación al Pie -->
+<footer class="bg-surface-container rounded-2xl p-6 sm:p-8 border-2 border-outline-variant/60 shadow-sm space-y-6 text-center">
+<div class="max-w-2xl mx-auto space-y-2">
+<div class="inline-flex items-center gap-2 text-primary font-black text-sm tracking-wide uppercase">
+<span class="material-symbols-outlined text-lg">flag</span>
+          Tecnología Criolla y Autónoma
+        </div>
+<p class="text-lg sm:text-xl font-bold text-primary">
+          Sistema 100% autónomo para el campo argentino • Funciona siempre en el casco y la manga
+        </p>
+<p class="text-sm text-on-surface-variant font-medium">
+          Pensado para trabajar tranquilos, sin vueltas ni demoras en el corral.
+        </p>
+</div>
+<div class="pt-2 flex flex-wrap items-center justify-center gap-4">
+<a class="bg-surface-container-lowest hover:bg-surface-bright text-primary border-2 border-outline-variant px-6 py-3.5 rounded-xl font-bold text-base flex items-center gap-2 shadow-sm transition-transform active:scale-95" href="#">
+<span class="material-symbols-outlined text-xl">home</span>
+          Ir al Inicio / Dashboard
+        </a>
+<a class="bg-primary hover:bg-primary/90 text-on-primary px-7 py-3.5 rounded-xl font-bold text-base flex items-center gap-2 shadow-md transition-transform active:scale-95" href="#">
+<span class="material-symbols-outlined text-xl">format_list_bulleted</span>
+          Ver Lista de Hacienda
+        </a>
+</div>
+</footer>
+</main>
+</body></html>

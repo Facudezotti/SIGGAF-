@@ -1,0 +1,311 @@
+<!DOCTYPE html><html lang="es"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>SIGGAF - Ingreso al Sistema</title>
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0..1,0" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#1E3A2B",
+            "primary-hover": "#162c20",
+            "primary-light": "#E8F0EB",
+            "secondary": "#2D6A4F",
+            "accent": "#4ADE80",
+            "surface-ground": "#F4F7F5",
+            "surface-card": "#FFFFFF",
+            "border-clean": "#CBD5E1",
+            "text-main": "#0F1E17",
+            "text-muted": "#526359"
+          },
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'system-ui', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+<style>
+    @layer base {
+      html, body {
+        margin: 0;
+        padding: 0;
+        font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+      }
+    }
+  </style>
+</head>
+<body class="min-h-screen relative flex items-center justify-center bg-surface-ground p-4 sm:p-6 lg:p-10 selection:bg-primary-light selection:text-primary">
+<!-- Imagen de fondo rural con filtro ambiental cálido y suave -->
+<div class="fixed inset-0 z-0 overflow-hidden pointer-events-none">
+<img alt="Paisaje rural de campo argentino" class="w-full h-full object-cover object-center filter blur-[2px] brightness-[0.92] scale-105 transition-all duration-700" src="https://lh3.googleusercontent.com/aida/AEtjO1VCUd_3IZOLocLRjf09Xytdnw1dEaFY3tMR9lRQ2lMxAxA3tTNFW3wLTSXA5DepEfir_dRcaMHTxth6aX8n1M94DozlyMVLNsn9cTAw-2QgkBuO4AS-dqrNDD-vZJg-FBiEAU-BUmfzo7xNQity21XliVsg3-AAMIqsBEdXV9lIBSQqJ4TxPDtKjC02KP3nb-Q6DxmcvxLyrvx9cwYjArvlh4SBfCUJk1w1dQziYrCtGrHso1B1liMYfg">
+<div class="absolute inset-0 bg-gradient-to-b from-primary/35 via-primary/25 to-primary/60 mix-blend-multiply"></div>
+<div class="absolute inset-0 bg-[#0F2218]/25 backdrop-blur-[1px]"></div>
+</div>
+<!-- Contenedor Principal Centrado -->
+<main class="relative z-10 w-full max-w-xl mx-auto my-auto">
+<div class="bg-white rounded-3xl shadow-2xl border border-white/80 p-6 sm:p-10 md:p-12 transition-all">
+<!-- Cabecera de la Tarjeta con Logo SIGGAF -->
+<header class="text-center pb-6 border-b border-gray-100">
+<div class="flex items-center justify-center mb-2">
+<img alt="Logo Oficial SIGGAF - Gestión Ganadera Argentina" class="h-16 sm:h-20 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1U1uDRhUzi4Eh6NAUZVWU4mqL2j6cP71Q0xVF2m8MRtxAWub2id0Z9na2CoOC4uOyEze1Q5hTP-FLdC5ECwtmjGYfNaFWZIcGJyjcEoHCz83dDCJgHd5TliqU4f5ood1fcV-3BBJsKZcSLKvtn7h1BYseaZ14FnnRbrnxJzU20AHngr13bsf-9NR0Qb3QuURTJtkL6LiUZKGnHtQZQjPonDdN2O5t4ryPqfwcuI0Q6YO2Rm21QZbhWCLr4">
+</div>
+<h1 class="text-2xl sm:text-3xl font-extrabold text-[#1E3A2B] tracking-tight">
+          Ingreso al Sistema
+        </h1>
+<p class="mt-1 text-base sm:text-lg text-text-muted font-medium">
+          Identificate para acceder a la libreta y datos de tu campo
+        </p>
+</header>
+<!-- PASO 1: Selector de Rol / Perfil -->
+<section aria-labelledby="role-selection-title" class="mt-6 sm:mt-7">
+<div class="flex items-center justify-between mb-3">
+<h2 class="text-base sm:text-lg font-bold text-text-main flex items-center gap-2" id="role-selection-title">
+<span class="flex items-center justify-center w-6 h-6 rounded-full bg-primary text-white text-xs font-bold">1</span>
+            ¿Cómo vas a ingresar hoy?
+          </h2>
+<span class="text-xs font-semibold px-2.5 py-1 bg-green-50 text-secondary rounded-full border border-green-200/60 flex items-center gap-1">
+<span class="material-symbols-outlined text-sm font-semibold">check_circle</span>
+            Paso simple
+          </span>
+</div>
+<input id="selected-role" name="rol_usuario" type="hidden" value="dueno">
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
+<!-- Opción Dueño -->
+<button aria-pressed="true" class="relative flex items-center gap-3.5 p-4 rounded-2xl border-2 border-primary bg-primary-light/60 text-left transition-all duration-200 shadow-sm focus:outline-none focus:ring-4 focus:ring-secondary/20 hover:border-primary cursor-pointer group" id="role-btn-dueno" onclick="switchRole('dueno')" type="button">
+<div class="w-13 h-13 min-w-[52px] min-h-[52px] rounded-xl bg-primary text-white flex items-center justify-center shadow-inner" id="role-icon-dueno">
+<span class="material-symbols-outlined text-3xl">cottage</span>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex items-center justify-between">
+<span class="text-lg font-bold text-primary">Soy Dueño</span>
+<span class="material-symbols-outlined text-primary text-xl font-bold" id="role-check-dueno">check_circle</span>
+</div>
+<p class="text-xs sm:text-sm text-text-muted mt-0.5 font-medium leading-tight">Administración y control del campo</p>
+</div>
+</button>
+<!-- Opción Peón -->
+<button aria-pressed="false" class="relative flex items-center gap-3.5 p-4 rounded-2xl border-2 border-slate-200 bg-slate-50/70 text-left transition-all duration-200 focus:outline-none focus:ring-4 focus:ring-secondary/20 hover:border-slate-400 hover:bg-slate-100/80 cursor-pointer group" id="role-btn-peon" onclick="switchRole('peon')" type="button">
+<div class="w-13 h-13 min-w-[52px] min-h-[52px] rounded-xl bg-slate-200 text-slate-700 flex items-center justify-center transition-colors" id="role-icon-peon">
+<span class="material-symbols-outlined text-3xl">handyman</span>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex items-center justify-between">
+<span class="text-lg font-bold text-slate-800" id="role-title-peon">Soy Peón</span>
+<span class="material-symbols-outlined text-transparent text-xl font-bold" id="role-check-peon">check_circle</span>
+</div>
+<p class="text-xs sm:text-sm text-text-muted mt-0.5 font-medium leading-tight">Trabajo diario, hacienda y rodeos</p>
+</div>
+</button>
+</div>
+</section>
+<!-- PASO 2: Vista Principal - Formulario de Acceso -->
+<section aria-labelledby="form-heading" class="mt-7" id="login-view">
+<h2 class="text-base sm:text-lg font-bold text-text-main flex items-center gap-2 mb-4" id="form-heading">
+<span class="flex items-center justify-center w-6 h-6 rounded-full bg-primary text-white text-xs font-bold">2</span>
+          Completá tus datos de acceso
+        </h2>
+<form action="/login" class="space-y-5" method="POST" onsubmit="event.preventDefault();">
+<!-- Campo 1: CUIL o Usuario -->
+<div>
+<label class="block text-base sm:text-lg font-bold text-primary mb-1.5" for="username">
+              Tu CUIL o Nombre de Usuario
+            </label>
+<div class="relative rounded-2xl">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-slate-500 text-2xl sm:text-3xl pointer-events-none">
+                person
+              </span>
+<input autocomplete="username" class="w-full h-14 sm:h-16 pl-14 pr-4 text-lg sm:text-xl font-semibold text-text-main bg-slate-50 border-2 border-slate-300 rounded-2xl placeholder:text-slate-400 placeholder:font-normal focus:bg-white focus:border-primary focus:ring-4 focus:ring-primary/15 transition-all outline-none shadow-sm" id="username" name="username" placeholder="Ejemplo: 20304050607 o JuanPerez" required="" type="text">
+</div>
+<p class="mt-1.5 text-xs sm:text-sm text-text-muted flex items-center gap-1.5">
+<span class="material-symbols-outlined text-sm sm:text-base text-secondary">info</span>
+              Ingresá tu número sin guiones ni puntos, o el usuario que te asignaron.
+            </p>
+</div>
+<!-- Campo 2: Contraseña -->
+<div>
+<div class="flex items-center justify-between mb-1.5">
+<label class="block text-base sm:text-lg font-bold text-primary" for="password">
+                Tu Contraseña
+              </label>
+<button class="inline-flex items-center gap-1.5 text-xs sm:text-sm font-bold text-secondary hover:text-primary transition-colors py-1 px-2 rounded-lg bg-green-50 hover:bg-green-100/70 border border-green-200" onclick="togglePasswordVisibility()" type="button">
+<span class="material-symbols-outlined text-base" id="pwd-btn-icon">visibility</span>
+<span id="pwd-btn-text">Mostrar clave</span>
+</button>
+</div>
+<div class="relative rounded-2xl">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-slate-500 text-2xl sm:text-3xl pointer-events-none">
+                lock
+              </span>
+<input autocomplete="current-password" class="w-full h-14 sm:h-16 pl-14 pr-16 text-lg sm:text-xl font-semibold text-text-main bg-slate-50 border-2 border-slate-300 rounded-2xl placeholder:text-slate-400 placeholder:font-normal focus:bg-white focus:border-primary focus:ring-4 focus:ring-primary/15 transition-all outline-none shadow-sm" id="password" name="password" placeholder="Escribí tu clave aquí" required="" type="password">
+<button aria-label="Ver u ocultar contraseña" class="absolute right-3.5 top-1/2 -translate-y-1/2 p-2 text-slate-500 hover:text-primary transition-colors focus:outline-none" onclick="togglePasswordVisibility()" type="button">
+<span class="material-symbols-outlined text-2xl" id="pwd-input-icon">visibility</span>
+</button>
+</div>
+</div>
+<!-- Botón Principal ENORME -->
+<div class="pt-2">
+<button class="w-full h-16 sm:h-18 py-4 px-6 bg-[#1E3A2B] hover:bg-[#162c20] active:scale-[0.99] text-white font-extrabold text-lg sm:text-xl tracking-wide rounded-2xl shadow-xl shadow-primary/25 hover:shadow-2xl transition-all duration-150 flex items-center justify-center gap-3 cursor-pointer group" type="submit">
+<span class="material-symbols-outlined text-2xl sm:text-3xl text-accent group-hover:rotate-6 transition-transform">lock_open</span>
+<span>INGRESAR AL SISTEMA</span>
+<span class="material-symbols-outlined text-2xl sm:text-3xl group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</button>
+</div>
+</form>
+<!-- Enlace Directo para Recuperar con Preguntas de Seguridad -->
+<div class="mt-6 pt-4 border-t border-slate-100 text-center">
+<button class="inline-flex items-center justify-center gap-2 text-sm sm:text-base font-bold text-secondary hover:text-primary underline decoration-2 underline-offset-4 py-2 px-3 rounded-xl hover:bg-slate-100 transition-all cursor-pointer" onclick="toggleRecoverySection(true)" type="button">
+<span class="material-symbols-outlined text-xl">help</span>
+<span>¿Olvidó su contraseña? Recuperar respondiendo preguntas de seguridad</span>
+</button>
+</div>
+</section>
+<!-- PASO ALTERNATIVO: Sección de Recuperación Asistida -->
+<section aria-labelledby="recovery-title" class="mt-6 hidden" id="recovery-view">
+<div class="p-4 bg-primary-light/70 rounded-2xl border border-primary/20 flex items-start gap-3.5 mb-5">
+<div class="w-10 h-10 rounded-xl bg-primary text-white flex items-center justify-center shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-2xl">security</span>
+</div>
+<div>
+<h3 class="text-base sm:text-lg font-bold text-primary" id="recovery-title">Recuperar Clave con Pregunta Secreta</h3>
+<p class="text-xs sm:text-sm text-text-muted mt-0.5">No necesitás casilla de correo electrónico. Respondé la pregunta que registraste al comenzar.</p>
+</div>
+</div>
+<form action="/recuperar" class="space-y-4" method="POST" onsubmit="event.preventDefault();">
+<div>
+<label class="block text-sm sm:text-base font-bold text-primary mb-1" for="recovery-username">Tu CUIL o Usuario</label>
+<input class="w-full h-12 sm:h-14 px-4 text-base sm:text-lg font-medium bg-slate-50 border-2 border-slate-300 rounded-xl focus:bg-white focus:border-primary outline-none" id="recovery-username" placeholder="Ingresá tu CUIL o usuario" type="text">
+</div>
+<div>
+<label class="block text-sm sm:text-base font-bold text-primary mb-1" for="security-question">Elegí tu pregunta de seguridad</label>
+<select class="w-full h-12 sm:h-14 px-3 text-sm sm:text-base font-medium bg-slate-50 border-2 border-slate-300 rounded-xl focus:bg-white focus:border-primary outline-none" id="security-question">
+<option>¿Nombre del primer campo o estancia donde trabajaste?</option>
+<option>¿Año en el que empezaste la actividad ganadera?</option>
+<option>¿Raza de vacuno preferida en tu establecimiento?</option>
+<option>¿Pueblo o localidad de tu primer remate feria?</option>
+</select>
+</div>
+<div>
+<label class="block text-sm sm:text-base font-bold text-primary mb-1" for="security-answer">Tu respuesta</label>
+<input class="w-full h-12 sm:h-14 px-4 text-base font-medium bg-slate-50 border-2 border-slate-300 rounded-xl focus:bg-white focus:border-primary outline-none" id="security-answer" placeholder="Escribí la respuesta exacta" type="text">
+</div>
+<div>
+<label class="block text-sm sm:text-base font-bold text-primary mb-1" for="new-password">Crear nueva contraseña</label>
+<input class="w-full h-12 sm:h-14 px-4 text-base font-medium bg-slate-50 border-2 border-slate-300 rounded-xl focus:bg-white focus:border-primary outline-none" id="new-password" placeholder="Mínimo 6 números o letras fáciles de recordar" type="password">
+</div>
+<div class="pt-2 flex flex-col sm:flex-row gap-3">
+<button class="flex-1 h-14 bg-secondary hover:bg-[#1f4a37] text-white font-bold text-base sm:text-lg rounded-xl shadow-md transition-all flex items-center justify-center gap-2" type="submit">
+<span class="material-symbols-outlined text-xl">key</span>
+<span>Guardar Nueva Contraseña</span>
+</button>
+<button class="h-14 px-6 bg-slate-200 hover:bg-slate-300 text-slate-800 font-bold text-base rounded-xl transition-all" onclick="toggleRecoverySection(false)" type="button">
+              Volver Atrás
+            </button>
+</div>
+</form>
+</section>
+<!-- AVISO DE ASISTENCIA HUMANA / ENCARGADO -->
+<aside class="mt-7 pt-5 border-t border-slate-200/80">
+<div class="bg-amber-50/80 border border-amber-200/80 rounded-2xl p-3.5 sm:p-4 flex items-center gap-3.5 text-amber-950">
+<div class="w-10 h-10 rounded-xl bg-amber-200/80 text-amber-900 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-2xl">support_agent</span>
+</div>
+<div class="text-xs sm:text-sm font-medium leading-relaxed">
+<strong class="font-bold block text-amber-950 text-sm">¿Necesitás ayuda para entrar?</strong>
+            Avisale al encargado del establecimiento o comunicate con la administración de tu campo para que te asistan al instante.
+          </div>
+</div>
+<div class="mt-3 flex flex-wrap items-center justify-between text-xs text-slate-500 gap-2 px-1">
+<span class="flex items-center gap-1.5 font-medium">
+<span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+            Sistema Conectado y Seguro
+          </span>
+<span class="font-semibold text-slate-600">SENASA / RENSPA Habilitado</span>
+</div>
+</aside>
+</div>
+</main>
+<script>
+    // Selector de rol claro y robusto
+    function switchRole(role) {
+      const input = document.getElementById('selected-role');
+      const btnDueno = document.getElementById('role-btn-dueno');
+      const btnPeon = document.getElementById('role-btn-peon');
+      const iconDueno = document.getElementById('role-icon-dueno');
+      const iconPeon = document.getElementById('role-icon-peon');
+      const checkDueno = document.getElementById('role-check-dueno');
+      const checkPeon = document.getElementById('role-check-peon');
+      const titlePeon = document.getElementById('role-title-peon');
+
+      input.value = role;
+
+      if (role === 'dueno') {
+        // Dueño Activo
+        btnDueno.className = 'relative flex items-center gap-3.5 p-4 rounded-2xl border-2 border-primary bg-primary-light/60 text-left transition-all duration-200 shadow-sm focus:outline-none focus:ring-4 focus:ring-secondary/20 cursor-pointer';
+        btnDueno.setAttribute('aria-pressed', 'true');
+        iconDueno.className = 'w-13 h-13 min-w-[52px] min-h-[52px] rounded-xl bg-primary text-white flex items-center justify-center shadow-inner';
+        checkDueno.className = 'material-symbols-outlined text-primary text-xl font-bold';
+
+        // Peón Inactivo
+        btnPeon.className = 'relative flex items-center gap-3.5 p-4 rounded-2xl border-2 border-slate-200 bg-slate-50/70 text-left transition-all duration-200 focus:outline-none focus:ring-4 focus:ring-secondary/20 hover:border-slate-400 hover:bg-slate-100/80 cursor-pointer';
+        btnPeon.setAttribute('aria-pressed', 'false');
+        iconPeon.className = 'w-13 h-13 min-w-[52px] min-h-[52px] rounded-xl bg-slate-200 text-slate-700 flex items-center justify-center transition-colors';
+        checkPeon.className = 'material-symbols-outlined text-transparent text-xl font-bold';
+        titlePeon.className = 'text-lg font-bold text-slate-800';
+      } else {
+        // Peón Activo
+        btnPeon.className = 'relative flex items-center gap-3.5 p-4 rounded-2xl border-2 border-primary bg-primary-light/60 text-left transition-all duration-200 shadow-sm focus:outline-none focus:ring-4 focus:ring-secondary/20 cursor-pointer';
+        btnPeon.setAttribute('aria-pressed', 'true');
+        iconPeon.className = 'w-13 h-13 min-w-[52px] min-h-[52px] rounded-xl bg-primary text-white flex items-center justify-center shadow-inner';
+        checkPeon.className = 'material-symbols-outlined text-primary text-xl font-bold';
+        titlePeon.className = 'text-lg font-bold text-primary';
+
+        // Dueño Inactivo
+        btnDueno.className = 'relative flex items-center gap-3.5 p-4 rounded-2xl border-2 border-slate-200 bg-slate-50/70 text-left transition-all duration-200 focus:outline-none focus:ring-4 focus:ring-secondary/20 hover:border-slate-400 hover:bg-slate-100/80 cursor-pointer';
+        btnDueno.setAttribute('aria-pressed', 'false');
+        iconDueno.className = 'w-13 h-13 min-w-[52px] min-h-[52px] rounded-xl bg-slate-200 text-slate-700 flex items-center justify-center transition-colors';
+        checkDueno.className = 'material-symbols-outlined text-transparent text-xl font-bold';
+      }
+    }
+
+    // Alternar visibilidad de contraseña
+    function togglePasswordVisibility() {
+      const pwdInput = document.getElementById('password');
+      const btnText = document.getElementById('pwd-btn-text');
+      const btnIcon = document.getElementById('pwd-btn-icon');
+      const inputIcon = document.getElementById('pwd-input-icon');
+
+      if (pwdInput.type === 'password') {
+        pwdInput.type = 'text';
+        btnText.textContent = 'Ocultar clave';
+        btnIcon.textContent = 'visibility_off';
+        inputIcon.textContent = 'visibility_off';
+      } else {
+        pwdInput.type = 'password';
+        btnText.textContent = 'Mostrar clave';
+        btnIcon.textContent = 'visibility';
+        inputIcon.textContent = 'visibility';
+      }
+    }
+
+    // Alternar entre pantalla de login y recuperación
+    function toggleRecoverySection(showRecovery) {
+      const loginView = document.getElementById('login-view');
+      const recoveryView = document.getElementById('recovery-view');
+
+      if (showRecovery) {
+        loginView.classList.add('hidden');
+        recoveryView.classList.remove('hidden');
+      } else {
+        recoveryView.classList.add('hidden');
+        loginView.classList.remove('hidden');
+      }
+    }
+  </script>
+</body></html>
